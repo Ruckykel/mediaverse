@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { Container } from "../../components/Container";
 import { Button } from "../../components/Button";
@@ -6,7 +5,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden -mt-16 pt-16" aria-label="Hero">
+    <section className="relative isolate overflow-hidden -mt-16 pt-16 min-h-screen" aria-label="Hero">
       {/* Background visual using placeholder image with dark overlay */}
       <div className="absolute inset-0 -z-10">
         <Image src="/sample1.webp" alt="Creative montage" fill priority className="object-cover" />
@@ -22,8 +21,15 @@ export function Hero() {
             Mediaverse is a full-scale creative and digital production company helping brands, creators, and businesses tell powerful stories through visuals, design, and technology.
           </p>
           <div className="mt-10 flex items-center gap-4">
-            <Button href="/portfolio" className="bg-accent text-white hover:brightness-110 focus-visible:ring-accent">
-              Explore Our Work
+            <Button href="/portfolio" variant="ghost" className="!bg-white !text-black hover:bg-white/90 focus-visible:ring-black group gap-2">
+              <span>Explore Our Work</span>
+              <span aria-hidden="true" className="inline-flex items-center transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:translate-x-1">
+                {/* Up-right arrow */}
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="pointer-events-none">
+                  <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9 7H17V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
             </Button>
             <Button href="/contact" variant="secondary" className="text-white border-border hover:bg-white/10">
               Book a Consultation
