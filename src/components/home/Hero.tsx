@@ -16,8 +16,8 @@ export function Hero() {
 
       <Container className="py-24 md:py-40">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">Where Vision Meets Digital Reality</h1>
-          <p className="mt-6 text-lg md:text-xl text-white/90">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">Where Vision Meets <span className="text-[#00F0FF]">Digital Reality</span></h1>
+          <p className="mt-6 text-base md:text-lg text-white/90">
             Mediaverse is a full-scale creative and digital production company helping brands, creators, and businesses tell powerful stories through visuals, design, and technology.
           </p>
           <div className="mt-10 flex items-center gap-4">
