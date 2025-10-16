@@ -10,7 +10,7 @@ type ButtonProps = {
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function Button({ href, children, variant = "primary", className = "", ...props }: ButtonProps) {
-  const base = "inline-flex items-center justify-center rounded-md font-semibold transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:translate-y-[1px]";
+  const base = "inline-flex items-center justify-center rounded-full font-semibold transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:translate-y-[1px]";
   const sizes = "px-5 py-3 text-sm";
   const variants: Record<string, string> = {
     primary: "bg-accent text-white hover:brightness-110 focus-visible:ring-accent",

@@ -25,12 +25,17 @@ export function Navbar() {
     setServicesOpen(false);
   };
   return (
-    <header className="sticky top-0 z-50 bg-bg/60 backdrop-blur supports-[backdrop-filter]:bg-bg/50 border-b border-white/20">
-      <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/mediaverse.png" alt="Mediaverse" width={140} height={28} priority />
-        </Link>
-        <nav className="hidden md:flex items-center gap-8">
+    <header className="sticky top-0 z-50 bg-transparent">
+      <Container className="py-3">
+        {/* Pill navigation bar */}
+        <div className="relative">
+          {/* Mild accent glow around the pill */}
+          <div className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[#00F0FF]/6 blur-md" aria-hidden="true" />
+          <div className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 backdrop-blur supports-[backdrop-filter]:backdrop-blur px-3 py-2 ring-1 ring-[#00F0FF]/10 shadow-[0_0_10px_rgba(0,240,255,0.08)]">
+          <Link href="/" className="flex items-center gap-2 pl-1">
+            <Image src="/mediaverse.png" alt="Mediaverse" width={140} height={28} priority />
+          </Link>
+          <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             item.label === "Services" ? (
               <div
@@ -72,11 +77,17 @@ export function Navbar() {
               </Link>
             )
           ))}
-        </nav>
-        <div className="hidden md:block">
-          <Button href="/contact" variant="primary" className="nav-cta rounded-full px-6 py-2.5 text-sm bg-accent text-white shadow-card border border-accent/40">
-            Book a Project
-          </Button>
+            </nav>
+            <div className="hidden md:block pr-1">
+            <Button
+              href="/contact"
+              variant="primary"
+              className="px-6 py-2.5 text-sm !bg-[#00F0FF] !text-black hover:brightness-110 focus-visible:ring-[#00F0FF]"
+            >
+              Get Started
+            </Button>
+            </div>
+          </div>
         </div>
       </Container>
     </header>
