@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import { Container } from "../../components/Container";
+import { Why } from "../../components/home/Why";
+import { AboutHero } from "../../components/about/AboutHero";
+import { OurStory } from "../../components/about/OurStory";
+import { AboutSkills } from "../../components/about/AboutSkills";
+import { Team } from "../../components/about/Team";
+import { AboutCTA } from "../../components/about/AboutCTA";
 
 export const metadata: Metadata = {
   title: "About — Mediaverse",
@@ -8,14 +14,13 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="py-20">
-      <Container>
-        <h1 className="text-3xl md:text-4xl font-bold">About Mediaverse</h1>
-        <p className="mt-4 text-muted max-w-2xl">
-          We are a creative studio bridging visual storytelling, digital design, and web technology —
-          helping brands and creators tell their stories.
-        </p>
-      </Container>
+    <main className="py-10 md:py-12">
+      <AboutHero />
+      <OurStory />
+      <AboutSkills />
+      <Why />
+      <Team />
+      <AboutCTA />
     </main>
   );
 }

@@ -45,7 +45,7 @@ export function Navbar() {
                 onMouseLeave={onServicesLeave}
                 ref={servicesRef}
               >
-                <Link href={item.href} className="nav-link text-sm text-muted hover:text-text transition-colors inline-flex items-center gap-1">
+                <Link href={item.href} className="text-sm text-muted inline-flex items-center gap-1 rounded-full px-3 py-1 transition-colors hover:bg-[#00F0FF] hover:text-black">
                   {item.label}
                   <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${servicesOpen ? "rotate-180 text-text" : "text-muted"}`} viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08Z" clipRule="evenodd"/></svg>
                 </Link>
@@ -72,7 +72,7 @@ export function Navbar() {
                 </div>
               </div>
             ) : (
-              <Link key={item.href} href={item.href} className="nav-link text-sm text-muted hover:text-text transition-colors">
+              <Link key={item.href} href={item.href} className="text-sm text-muted rounded-full px-3 py-1 transition-colors hover:bg-[#00F0FF] hover:text-black">
                 {item.label}
               </Link>
             )
