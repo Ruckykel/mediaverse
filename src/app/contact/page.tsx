@@ -35,15 +35,15 @@ export default function ContactPage() {
                   <h3 className="text-lg font-extrabold">General Inquiries</h3>
                   <ul className="mt-3 space-y-3 text-sm text-white/80">
                     <li>
-                      <div className="flex items-center gap-2"><MdEmail className="h-4 w-4" /><span>Email</span></div>
+                      <div className="flex items-center gap-2 font-semibold text-white"><MdEmail className="h-4 w-4 text-[#00F0FF]" /><span>Email</span></div>
                       <div className="mt-1 pl-6">hello@mediaverse.com</div>
                     </li>
                     <li>
-                      <div className="flex items-center gap-2"><FaPhone className="h-4 w-4" /><span>Phone</span></div>
+                      <div className="flex items-center gap-2 font-semibold text-white"><FaPhone className="h-4 w-4 text-[#00F0FF]" /><span>Phone</span></div>
                       <div className="mt-1 pl-6">+234 (0) 800 000 0000</div>
                     </li>
                     <li>
-                      <div className="flex items-center gap-2"><MdAccessTime className="h-4 w-4" /><span>Hours</span></div>
+                      <div className="flex items-center gap-2 font-semibold text-white"><MdAccessTime className="h-4 w-4 text-[#00F0FF]" /><span>Hours</span></div>
                       <div className="mt-1 pl-6">Mon – Sat, 9am – 6pm</div>
                     </li>
                   </ul>
@@ -53,12 +53,12 @@ export default function ContactPage() {
               <div className="mt-8 rounded-xl border border-white/10 bg-white/5 p-4">
                 <h3 className="text-lg font-extrabold">Connect with us</h3>
                 <p className="mt-2 text-sm text-white/70">Prefer socials? Reach us on any of these platforms.</p>
-                <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-3 text-white/80 text-sm">
-                  <li><Link href="#" className="inline-flex items-center gap-2 hover:text-white"><FaInstagram className="h-5 w-5" /><span>@mediaverse</span></Link></li>
-                  <li><Link href="#" className="inline-flex items-center gap-2 hover:text-white"><FaLinkedin className="h-5 w-5" /><span>/company/mediaverse</span></Link></li>
-                  <li><Link href="#" className="inline-flex items-center gap-2 hover:text-white"><FaXTwitter className="h-5 w-5" /><span>@mediaverse</span></Link></li>
-                  <li><Link href="#" className="inline-flex items-center gap-2 hover:text-white"><FaYoutube className="h-5 w-5" /><span>Mediaverse</span></Link></li>
-                  <li><Link href="#" className="inline-flex items-center gap-2 hover:text-white"><FaTiktok className="h-5 w-5" /><span>@mediaverse</span></Link></li>
+                <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+                  <li><Link href="#" className="inline-flex items-center gap-2 text-[#00F0FF] hover:text-[#00F0FF]"><FaInstagram className="h-5 w-5" /><span>@mediaverse</span></Link></li>
+                  <li><Link href="#" className="inline-flex items-center gap-2 text-[#00F0FF] hover:text-[#00F0FF]"><FaLinkedin className="h-5 w-5" /><span>/company/mediaverse</span></Link></li>
+                  <li><Link href="#" className="inline-flex items-center gap-2 text-[#00F0FF] hover:text-[#00F0FF]"><FaXTwitter className="h-5 w-5" /><span>@mediaverse</span></Link></li>
+                  <li><Link href="#" className="inline-flex items-center gap-2 text-[#00F0FF] hover:text-[#00F0FF]"><FaYoutube className="h-5 w-5" /><span>Mediaverse</span></Link></li>
+                  <li><Link href="#" className="inline-flex items-center gap-2 text-[#00F0FF] hover:text-[#00F0FF]"><FaTiktok className="h-5 w-5" /><span>@mediaverse</span></Link></li>
                 </ul>
               </div>
             </div>
