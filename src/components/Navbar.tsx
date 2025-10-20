@@ -9,7 +9,6 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -18,9 +17,16 @@ export function Navbar() {
   const servicesRef = useRef<HTMLDivElement>(null);
 
   const onServicesLeave: React.MouseEventHandler<HTMLDivElement> = (e) => {
-    const next = e.relatedTarget as Node | null;
-    if (next && servicesRef.current && servicesRef.current.contains(next)) {
-      return; // still within dropdown tree
+    const next = e.relatedTarget as EventTarget | null;
+    const container = servicesRef.current;
+    if (!container) {
+      setServicesOpen(false);
+      return;
+    }
+    // Only keep open if the next target is a Node contained within the dropdown container
+    if (next && typeof next === "object" && (next as Node | null) && "nodeType" in (next as Node)) {
+      const node = next as Node;
+      if (container.contains(node)) return;
     }
     setServicesOpen(false);
   };
@@ -56,16 +62,16 @@ export function Navbar() {
                   onMouseLeave={onServicesLeave}
                 >
                   <div className="grid">
-                    <Link href="/services#digital-media" className="rounded-md px-4 py-2 text-sm text-muted hover:text-text transition-colors">
+                    <Link href="/services/digital-media" className="rounded-md px-4 py-2 text-sm text-muted hover:text-text transition-colors">
                       <span className="nav-link inline-block">Digital Media Production & Content Creation</span>
                     </Link>
-                    <Link href="/services#branding" className="rounded-md px-4 py-2 text-sm text-muted hover:text-text transition-colors">
+                    <Link href="/services/branding" className="rounded-md px-4 py-2 text-sm text-muted hover:text-text transition-colors">
                       <span className="nav-link inline-block">Branding & Creative Design</span>
                     </Link>
-                    <Link href="/services#marketing" className="rounded-md px-4 py-2 text-sm text-muted hover:text-text transition-colors">
+                    <Link href="/services/marketing" className="rounded-md px-4 py-2 text-sm text-muted hover:text-text transition-colors">
                       <span className="nav-link inline-block">Digital Marketing & Social Strategy</span>
                     </Link>
-                    <Link href="/services#web" className="rounded-md px-4 py-2 text-sm text-muted hover:text-text transition-colors">
+                    <Link href="/services/web" className="rounded-md px-4 py-2 text-sm text-muted hover:text-text transition-colors">
                       <span className="nav-link inline-block">Web & Interactive Experiences</span>
                     </Link>
                   </div>

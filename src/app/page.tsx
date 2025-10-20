@@ -5,6 +5,7 @@ import { Featured } from "../components/home/Featured";
 import { Why } from "../components/home/Why";
 import { CTA } from "../components/home/CTA";
 import { Partners } from "../components/home/Partners";
+import { Stats } from "../components/home/Stats";
 
 export const metadata: Metadata = {
   title: "Mediaverse — Where Vision Meets Digital Reality",
@@ -17,6 +18,7 @@ export default function Home() {
     <main>
       <Hero />
       <Why />
+      <Stats />
       <section>
         <Services />
       </section>
