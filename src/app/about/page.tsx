@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Container } from "../../components/Container";
 import { Why } from "../../components/home/Why";
 import { AboutHero } from "../../components/about/AboutHero";
 import { OurStory } from "../../components/about/OurStory";

@@ -17,7 +17,7 @@ export function Packages() {
         <h2 className="text-2xl md:text-3xl font-bold">Flexible packages for every need.</h2>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
           <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {packages.map((p, idx) => (
+            {packages.map((p) => (
               <div key={p.title} className="relative overflow-hidden rounded-lg border border-border/60 bg-elevated/60 p-6 shadow-card backdrop-blur">
                 <div className="pointer-events-none absolute -right-8 bottom-0 h-24 w-24 rounded-full bg-accent/10 blur-2xl" />
                 <h3 className="text-lg font-semibold">{p.title}</h3>
