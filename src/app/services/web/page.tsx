@@ -4,106 +4,126 @@ import { Container } from "../../../components/Container";
 import { Button } from "../../../components/Button";
 
 export const metadata: Metadata = {
-  title: "Web Design & Development — Custom Websites with SEO | Mediaverse",
-  description: "Stunning, responsive, SEO-optimized websites for brands and creators.",
+  title: "Web & Interactive Experiences — Custom Websites | Mediaverse",
+  description: "Professional web design, development, and interactive digital experiences.",
 };
 
-const services = [
-  { title: "Web Design", points: ["UI/UX tailored to brand", "Interactive prototypes", "Conversion-focused layouts"] },
-  { title: "Web Development", points: ["React/Next.js, WordPress, Shopify", "Secure, fast & responsive", "Backend & integrations"] },
-  { title: "SEO & Optimization", points: ["On-page & technical setup", "Speed & analytics", "Sitemap & schema"] },
-  { title: "Maintenance & Support", points: ["Updates & fixes", "Performance monitoring", "Security & backups"] },
-];
-
-const packages = [
-  { name: "Starter Site", ideal: "Personal brands", includes: "1–3 pages, responsive, SEO setup", price: "₦120,000" },
-  { name: "Business Site", ideal: "SMBs", includes: "4–8 pages, CMS integration", price: "₦250,000" },
-  { name: "E-Commerce Site", ideal: "Online stores", includes: "Products + payments", price: "₦400,000" },
-  { name: "Custom Project", ideal: "Complex systems", includes: "Tailored functionality", price: "Custom" },
+const categories = [
+  {
+    title: "Website Design & Development",
+    description: "We build high-performing websites designed to convert. From sleek visuals to clean code, we ensure your online presence is both captivating and functional — optimized for every screen and search engine.",
+    includes: ["Corporate, Portfolio & Agency Websites", "E-commerce Platforms", "Landing Pages & Microsites", "SEO Optimization & Speed Performance"],
+    image: "/sample2.webp",
+    layout: "left" // image left, content right
+  },
+  {
+    title: "Immersive Digital Experiences (AR/VR, Interactive Portfolios)",
+    description: "Step beyond traditional web. Our team crafts digital experiences that blend reality with imagination — perfect for brands that want to wow audiences through innovation and storytelling.",
+    includes: ["Augmented & Virtual Reality Showcases", "Interactive 3D Product Displays", "Digital Exhibitions & Virtual Events", "Interactive Brand Experiences"],
+    image: "/sample1.webp",
+    layout: "right" // image right, content left
+  },
+  {
+    title: "Content Management Systems (CMS) & Integrations",
+    description: "We empower you to manage your content effortlessly. Our CMS and integration services make it easy to update, scale, and automate your digital operations — without breaking flow or design.",
+    includes: ["WordPress, Webflow, Shopify, & Custom CMS Builds", "API & Third-Party Integrations", "Admin Dashboards & Content Controls", "Automation & Workflow Systems"],
+    image: "/sample2.webp",
+    layout: "left" // image left, content right
+  },
+  {
+    title: "Web Hosting & Maintenance",
+    description: "Our job doesn't end after launch. We keep your website running smoothly, securely, and efficiently — ensuring 24/7 uptime and optimal user experience.",
+    includes: ["Secure Hosting & Domain Management", "Regular Updates & Backups", "Performance Monitoring", "Technical Support & Troubleshooting"],
+    image: "/sample1.webp",
+    layout: "right" // image right, content left
+  }
 ];
 
 export default function WebPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative isolate overflow-hidden">
+      <section className="absolute inset-0 z-0">
         <div className="absolute inset-0 -z-10">
-          <Image src="/sample2.webp" alt="Web montage" fill priority className="object-cover" />
+          <Image src="/sample2.webp" alt="Web design and development" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-black/65" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[rgb(var(--color-bg))]" />
         </div>
-        <Container className="py-24 md:py-36">
+        <Container className="h-full flex items-center pt-20 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white">Websites that inspire, convert, and perform.</h1>
-            <p className="mt-6 text-lg text-white/90">Portfolios, e-commerce, and business platforms.</p>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white">Where Function Meets Emotion in the Digital Space.</h1>
+            <p className="mt-6 text-lg text-white/90">We design and develop websites and interactive experiences that don&apos;t just look good — they work beautifully. Every click, scroll, and animation is built to connect.</p>
+            <p className="mt-4 text-white/80">In today&apos;s digital world, your website is your first impression — and often, your strongest storyteller. Mediaverse merges strategy, design, and development to create immersive, responsive, and future-ready online experiences that engage users and elevate brands.</p>
             <div className="mt-10 flex items-center gap-4">
-              <Button href="/contact?service=Web%20Design%20%26%20Development" className="bg-accent text-white hover:brightness-110">Start a Project</Button>
+              <Button href="/contact?service=Web%20%26%20Interactive%20Experiences" className="!bg-[#00F0FF] !text-black hover:brightness-110">Let&apos;s Build Your Website</Button>
               <Button href="/portfolio" variant="secondary" className="border-border text-white hover:bg-white/10">View Portfolio</Button>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Services */}
-      <section className="py-16">
-        <Container>
-          <h2 className="text-2xl md:text-3xl font-bold">We build more than websites — we build experiences.</h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((s) => (
-              <div key={s.title} className="relative overflow-hidden rounded-lg border border-border/60 bg-elevated/60 p-6 shadow-card backdrop-blur">
-                <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-accent/10 blur-2xl" />
-                <h3 className="text-lg font-semibold">{s.title}</h3>
-                <ul className="mt-3 space-y-2 text-sm text-muted">
-                  {s.points.map((p) => (
-                    <li key={p}>• {p}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      {/* Spacer to push content below hero */}
+      <div className="h-screen"></div>
 
-      {/* Industries */}
-      <section className="py-16">
-        <Container>
-          <div className="relative overflow-hidden rounded-lg border border-border/60 bg-elevated/60 p-6 shadow-card backdrop-blur">
-            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-accent/10 blur-2xl" />
-            <h3 className="text-lg font-semibold">Industries we serve</h3>
-            <ul className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-muted">
-              <li>• Creators</li>
-              <li>• Startups & agencies</li>
-              <li>• Fashion & lifestyle</li>
-              <li>• Corporate & services</li>
-              <li>• Nonprofits & communities</li>
-            </ul>
-          </div>
-        </Container>
-      </section>
-
-      {/* Packages */}
-      <section className="py-16">
-        <Container>
-          <h2 className="text-2xl md:text-3xl font-bold">Choose a plan that fits your vision.</h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {packages.map((pkg) => (
-              <div key={pkg.name} className="relative overflow-hidden rounded-lg border border-border/60 bg-elevated/60 p-6 shadow-card backdrop-blur">
-                <div className="pointer-events-none absolute -right-8 bottom-0 h-24 w-24 rounded-full bg-accent/10 blur-2xl" />
-                <h3 className="text-lg font-semibold">{pkg.name}</h3>
-                <p className="mt-1 text-sm text-muted">Ideal for: {pkg.ideal}</p>
-                <p className="mt-1 text-sm text-muted">Includes: {pkg.includes}</p>
-                <p className="mt-3 text-accent font-semibold">Starting from {pkg.price}</p>
+      {/* Categories */}
+      {categories.map((category) => (
+        <section key={category.title} className="py-20">
+          <Container>
+            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${category.layout === 'right' ? 'lg:grid-flow-col-dense' : ''}`}>
+              {/* Image */}
+              <div className={`relative ${category.layout === 'right' ? 'lg:col-start-2' : ''}`}>
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                  <Image 
+                    src={category.image} 
+                    alt={category.title} 
+                    fill 
+                    className="object-cover" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
+                <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-accent/20 blur-2xl" />
               </div>
-            ))}
-          </div>
-          <div className="mt-8 flex items-center gap-4">
-            <Button href="/contact?service=Web%20Design%20%26%20Development" className="bg-accent text-white hover:brightness-110">Get a Quote</Button>
-            <Button href="/portfolio" variant="secondary" className="border-border text-white hover:bg-white/10">Explore Portfolio</Button>
+
+              {/* Content */}
+              <div className={`${category.layout === 'right' ? 'lg:col-start-1' : ''}`}>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">{category.title}</h2>
+                <p className="text-lg text-muted mb-8 leading-relaxed">{category.description}</p>
+                
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-accent">Includes:</h3>
+                  <ul className="space-y-3">
+                    {category.includes.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                        <span className="text-muted">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-8">
+                  <Button href="/contact?service=Web%20%26%20Interactive%20Experiences" className="bg-accent text-white hover:brightness-110">
+                    Learn More
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+      ))}
+
+      {/* CTA */}
+      <section className="py-20 bg-gradient-to-r from-accent/10 to-transparent">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Build Experiences That Go Beyond Screens.</h2>
+            <p className="text-lg text-muted mb-8">From design to deployment, Mediaverse creates digital journeys that leave lasting impressions.</p>
+            <Button href="/contact?service=Web%20%26%20Interactive%20Experiences" className="bg-accent text-white hover:brightness-110">
+              Let&apos;s Build Your Website
+            </Button>
           </div>
         </Container>
       </section>
     </main>
   );
 }
-
-
