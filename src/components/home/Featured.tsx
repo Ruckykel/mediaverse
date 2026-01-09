@@ -5,12 +5,13 @@ import React, { useMemo, useState, useRef, useCallback } from "react";
 import { Container } from "../../components/Container";
 
 const websites = [
-  { title: "Eduboosta", href: "https://eduboosta.com/", img: "/sample2.webp", tag: "Website" },
-  { title: "Easymovezone", href: "https://easymovezone.com/", img: "/sample1.webp", tag: "Website" },
-  { title: "Informnaija", href: "https://informnaija.com/", img: "/sample2.webp", tag: "Website" },
-  { title: "Standex Digital", href: "https://standexdigital.com/", img: "/sample1.webp", tag: "Website" },
-  { title: "BoxOutAfrica", href: "https://www.boxoutafrica.com/", img: "/sample1.webp", tag: "Website" },
-  { title: "Convivia 24", href: "https://convivia24.com/", img: "/sample2.webp", tag: "Website" },
+  { title: "Rekruuter", href: "https://rekruuter.com/landing", img: "/rekruuter.png", tag: "Website" },
+  { title: "Eduboosta", href: "https://eduboosta.com/", img: "/eduboosta.png", tag: "Website" },
+  { title: "Easymovezone", href: "https://easymovezone.com/", img: "/easymovezone.png", tag: "Website" },
+  { title: "Informnaija", href: "https://informnaija.com/", img: "/informnaija.png", tag: "Website" },
+  { title: "Standex Digital", href: "https://standexdigital.com/", img: "/standex.png", tag: "Website" },
+  { title: "BoxOutAfrica", href: "https://www.boxoutafrica.com/", img: "/boxoutafrica.png", tag: "Website" },
+  { title: "Convivia 24", href: "https://convivia24.com/", img: "/convivia24.png", tag: "Website" },
 ];
 
 const placeholder = (label: string) =>
@@ -41,10 +42,11 @@ export function Featured() {
   // Accent function removed (no colored borders needed)
 
   const websiteDesc: Record<string, string> = {
+    Rekruuter: "AI hiring assistant platform",
     Eduboosta: "Learning platform site",
-    Easymovezone: "Logistics & moving services website",
-    Informnaija: "Entertainment and news portal",
-    "Standex Digital": "Digital services company website",
+    Easymovezone: "Career and job opportunity platform",
+    Informnaija: "Nigeria information and services platform",
+    "Standex Digital": "Digital solutions platform",
     BoxOutAfrica: "Funding platform for African innovation",
     "Convivia 24": "Event and experiences portal",
   };
@@ -71,9 +73,8 @@ export function Featured() {
                 <button
                   key={t.key}
                   onClick={() => setActive(t.key)}
-                  className={`z-10 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
-                    active === t.key ? "text-black" : "text-white"
-                  }`}
+                  className={`z-10 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${active === t.key ? "text-black" : "text-white"
+                    }`}
                 >
                   {t.label}
                 </button>
