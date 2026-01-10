@@ -17,27 +17,27 @@ export function Why() {
 
           {/* Highlights only (no curve, dots, or numbers) */}
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-              <div className="relative rounded-xl border border-white/10 bg-white/5 p-5 shadow-card backdrop-blur-md ring-1 ring-[#00F0FF]/10">
-                <h3 className="text-sm font-semibold">360° Digital Expertise</h3>
-                <p className="mt-1 text-xs text-white/70">A full spectrum of creative, marketing, and web capabilities.</p>
-              </div>
-              <div className="relative rounded-xl border border-white/10 bg-white/5 p-5 shadow-card backdrop-blur-md ring-1 ring-[#00F0FF]/10">
-                <h3 className="text-sm font-semibold">Collaborative Process</h3>
-                <p className="mt-1 text-xs text-white/70">We co-create with you — transparent, aligned, and iterative.</p>
-              </div>
-              <div className="relative rounded-xl border border-white/10 bg-white/5 p-5 shadow-card backdrop-blur-md ring-1 ring-[#00F0FF]/10">
-                <h3 className="text-sm font-semibold">Data-Driven Creativity</h3>
-                <p className="mt-1 text-xs text-white/70">Ideas powered by insights for work that performs.</p>
-              </div>
-              <div className="relative rounded-xl border border-white/10 bg-white/5 p-5 shadow-card backdrop-blur-md ring-1 ring-[#00F0FF]/10">
-                <h3 className="text-sm font-semibold">Consistent Brand Evolution</h3>
-                <p className="mt-1 text-xs text-white/70">We grow with you — ensuring relevance and impact over time.</p>
-              </div>
+            <div className="relative rounded-xl border border-white/10 bg-white/5 p-5 shadow-card backdrop-blur-md ring-1 ring-[#00F0FF]/10">
+              <h3 className="text-sm font-semibold">360° Digital Expertise</h3>
+              <p className="mt-1 text-xs text-white/70">A full spectrum of creative, marketing, and web capabilities.</p>
             </div>
-            <div className="mt-8">
-              <Link href="/contact" className="inline-flex items-center rounded-full bg-[#00F0FF] px-4 py-2 text-sm font-semibold text-black hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F0FF]">Get Started</Link>
+            <div className="relative rounded-xl border border-white/10 bg-white/5 p-5 shadow-card backdrop-blur-md ring-1 ring-[#00F0FF]/10">
+              <h3 className="text-sm font-semibold">Collaborative Process</h3>
+              <p className="mt-1 text-xs text-white/70">We co-create with you — transparent, aligned, and iterative.</p>
+            </div>
+            <div className="relative rounded-xl border border-white/10 bg-white/5 p-5 shadow-card backdrop-blur-md ring-1 ring-[#00F0FF]/10">
+              <h3 className="text-sm font-semibold">Data-Driven Creativity</h3>
+              <p className="mt-1 text-xs text-white/70">Ideas powered by insights for work that performs.</p>
+            </div>
+            <div className="relative rounded-xl border border-white/10 bg-white/5 p-5 shadow-card backdrop-blur-md ring-1 ring-[#00F0FF]/10">
+              <h3 className="text-sm font-semibold">Consistent Brand Evolution</h3>
+              <p className="mt-1 text-xs text-white/70">We grow with you — ensuring relevance and impact over time.</p>
             </div>
           </div>
+          <div className="mt-8">
+            <Link href="/contact#contact-form" className="inline-flex items-center rounded-full bg-[#00F0FF] px-4 py-2 text-sm font-semibold text-black hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F0FF]">Get Started</Link>
+          </div>
+        </div>
       </Container>
     </section>
   );

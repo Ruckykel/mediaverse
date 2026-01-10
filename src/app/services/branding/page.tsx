@@ -1,126 +1,193 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "../../../components/Container";
-import { Button } from "../../../components/Button";
+import { FaPalette, FaPenNib, FaMobileScreen, FaArrowsRotate } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Branding & Creative Design — Visual Identity & Design | Mediaverse",
-  description: "Professional branding, graphic design, and visual identity creation.",
+  title: "Branding & Creative Design — Mediaverse",
+  description: "Strategic brand identity, visual design, and creative solutions that make your brand unforgettable.",
 };
 
-const categories = [
+const services = [
   {
+    icon: FaPenNib,
     title: "Brand Identity Development",
-    description: "We help you shape how the world sees you. Through research, design, and strategy, we build cohesive identities that express your brand's core essence across every medium.",
-    includes: ["Logo Design & Iconography", "Color Palette & Typography Systems", "Brand Guidelines & Voice Identity", "Identity Launch Kits"],
-    image: "/sample2.webp",
-    layout: "left" // image left, content right
+    description: "We help you shape how the world sees you. Through research, design, and strategy, we build cohesive identities that express your brand's core essence.",
+    features: ["Logo Design & Iconography", "Color Palette & Typography", "Brand Guidelines & Voice", "Identity Launch Kits"],
+    gradient: "from-purple-500/20 to-pink-500/20",
   },
   {
-    title: "Visual Communication & Marketing Collateral",
-    description: "Every visual touchpoint matters. We design marketing materials that communicate clearly, convert effectively, and remain consistent with your brand's identity and tone.",
-    includes: ["Flyers, Posters & Brochures", "Corporate Decks & Presentations", "Social Media Design Systems", "Print & Digital Advertising Assets"],
-    image: "/sample1.webp",
-    layout: "right" // image right, content left
+    icon: FaPalette,
+    title: "Visual Communication",
+    description: "Every visual touchpoint matters. We design marketing materials that communicate clearly, convert effectively, and remain consistent with your brand.",
+    features: ["Flyers, Posters & Brochures", "Corporate Decks & Presentations", "Social Media Design Systems", "Print & Digital Advertising"],
+    gradient: "from-orange-500/20 to-yellow-500/20",
   },
   {
-    title: "UI/UX Design for Websites & Apps",
-    description: "We craft digital interfaces that merge aesthetics with usability. Our UI/UX process ensures your website or app looks stunning — and feels effortless to use.",
-    includes: ["Web & Mobile UI Design", "Interactive Prototypes", "User Experience Mapping", "Design Systems & Components"],
-    image: "/sample2.webp",
-    layout: "left" // image left, content right
+    icon: FaMobileScreen,
+    title: "UI/UX Design",
+    description: "We craft digital interfaces that merge aesthetics with usability. Our UI/UX process ensures your website or app looks stunning and feels effortless.",
+    features: ["Web & Mobile UI Design", "Interactive Prototypes", "User Experience Mapping", "Design Systems & Components"],
+    gradient: "from-cyan-500/20 to-blue-500/20",
   },
   {
-    title: "Rebranding & Digital Transformation Packages",
-    description: "Your brand evolves — and your identity should too. We help businesses modernize their presence and reintroduce themselves to the world with clarity and confidence.",
-    includes: ["Brand Audits & Strategy Sessions", "Visual Refresh & Redesign", "Messaging & Tone Realignment", "Complete Brand Rollouts"],
-    image: "/sample1.webp",
-    layout: "right" // image right, content left
-  }
+    icon: FaArrowsRotate,
+    title: "Rebranding & Transformation",
+    description: "Your brand evolves — and your identity should too. We help businesses modernize their presence and reintroduce themselves with clarity and confidence.",
+    features: ["Brand Audits & Strategy", "Visual Refresh & Redesign", "Messaging & Tone Realignment", "Complete Brand Rollouts"],
+    gradient: "from-green-500/20 to-teal-500/20",
+  },
+];
+
+const portfolio = [
+  { title: "Rekruuter", category: "Brand Identity", image: "/rekruuter.png" },
+  { title: "Eduboosta", category: "Web Design", image: "/eduboosta.png" },
+  { title: "BoxOutAfrica", category: "Visual Identity", image: "/boxoutafrica.png" },
 ];
 
 export default function BrandingPage() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="absolute inset-0 z-0">
+    <main className="overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[80vh] flex items-center">
         <div className="absolute inset-0 -z-10">
-          <Image src="/sample2.webp" alt="Branding and design" fill priority className="object-cover" />
-          <div className="absolute inset-0 bg-black/65" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[rgb(var(--color-bg))]" />
+          <Image src="/sample2.webp" alt="Branding design" fill priority className="object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--color-bg))] via-transparent to-transparent" />
         </div>
-        <Container className="h-full flex items-center pt-20 relative z-10">
+
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#00F0FF]/10 rounded-full blur-3xl" />
+
+        <Container className="relative z-10 py-20">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white">Design That Defines. Creativity That Connects.</h1>
-            <p className="mt-6 text-lg text-white/90">Your brand deserves to be unforgettable. We craft bold, strategic, and timeless identities that turn audiences into loyal believers.</p>
-            <p className="mt-4 text-white/80">From logos to full-scale brand systems, Mediaverse creates visual experiences that go beyond beauty — they communicate meaning, inspire action, and elevate perception. Whether you&apos;re building a new identity or redefining an existing one, we make your brand feel human, modern, and powerful.</p>
-            <div className="mt-10 flex items-center gap-4">
-              <Button href="/contact?service=Branding%20%26%20Creative%20Design" className="!bg-[#00F0FF] !text-black hover:brightness-110">Start Your Branding Journey</Button>
-              <Button href="/portfolio" variant="secondary" className="border-border text-white hover:bg-white/10">View Portfolio</Button>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/30 mb-6">
+              <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+              <span className="text-sm text-purple-400 font-medium">Branding & Design</span>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+              Design That{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+                Defines & Connects
+              </span>
+            </h1>
+
+            <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
+              Your brand deserves to be unforgettable. We craft bold, strategic, and timeless identities that turn audiences into loyal believers.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/contact#contact-form"
+                className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:brightness-110 transition-all shadow-[0_0_30px_rgba(168,85,247,0.3)]"
+              >
+                Start Your Brand
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-all"
+              >
+                View Portfolio
+              </Link>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Spacer to push content below hero */}
-      <div className="h-screen"></div>
-
-      {/* Categories */}
-      {categories.map((category) => (
-        <section key={category.title} className="py-20">
-          <Container>
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${category.layout === 'right' ? 'lg:grid-flow-col-dense' : ''}`}>
-              {/* Image */}
-              <div className={`relative ${category.layout === 'right' ? 'lg:col-start-2' : ''}`}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                  <Image 
-                    src={category.image} 
-                    alt={category.title} 
-                    fill 
-                    className="object-cover" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                </div>
-                <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-accent/20 blur-2xl" />
-              </div>
-
-              {/* Content */}
-              <div className={`${category.layout === 'right' ? 'lg:col-start-1' : ''}`}>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">{category.title}</h2>
-                <p className="text-lg text-muted mb-8 leading-relaxed">{category.description}</p>
-                
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-accent">Includes:</h3>
-                  <ul className="space-y-3">
-                    {category.includes.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                        <span className="text-muted">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-8">
-                  <Button href="/contact?service=Branding%20%26%20Creative%20Design" className="bg-accent text-white hover:brightness-110">
-                    Learn More
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </section>
-      ))}
-
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-accent/10 to-transparent">
+      {/* Services Grid */}
+      <section className="py-20 md:py-32">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Your Brand. Reimagined.</h2>
-            <p className="text-lg text-muted mb-8">Let&apos;s design something extraordinary — built for the now, crafted to last.</p>
-            <Button href="/contact?service=Branding%20%26%20Creative%20Design" className="bg-accent text-white hover:brightness-110">
-              Start Your Branding Journey
-            </Button>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-purple-400 font-semibold text-sm tracking-wider uppercase">Our Services</p>
+            <h2 className="mt-4 text-3xl md:text-5xl font-extrabold">
+              Comprehensive Branding Solutions
+            </h2>
+            <p className="mt-4 text-white/70">
+              From logo design to complete brand transformations, we create visual experiences that go beyond beauty.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className={`group relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br ${service.gradient} backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300`}
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 mb-6">
+                  <service.icon className="w-6 h-6 text-purple-400" />
+                </div>
+
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-white/70 mb-6">{service.description}</p>
+
+                <div className="space-y-3">
+                  {service.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+                      <span className="text-sm text-white/80">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Portfolio Preview */}
+      <section className="py-20 md:py-32 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-purple-400 font-semibold text-sm tracking-wider uppercase">Our Work</p>
+            <h2 className="mt-4 text-3xl md:text-5xl font-extrabold">
+              Brands We've Transformed
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {portfolio.map((item) => (
+              <div key={item.title} className="group relative rounded-2xl overflow-hidden border border-white/10">
+                <div className="relative aspect-[16/10]">
+                  <Image src={item.image} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-sm text-purple-400">{item.category}</p>
+                  <h3 className="text-xl font-bold">{item.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 md:py-32">
+        <Container>
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-white/10">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl" />
+
+            <div className="relative z-10 p-12 md:p-20 text-center">
+              <h2 className="text-3xl md:text-5xl font-extrabold">
+                Your Brand.{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Reimagined.</span>
+              </h2>
+              <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
+                Let's design something extraordinary — built for the now, crafted to last.
+              </p>
+              <Link
+                href="/contact#contact-form"
+                className="mt-8 inline-flex items-center gap-2 px-10 py-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg hover:brightness-110 transition-all shadow-[0_0_40px_rgba(168,85,247,0.4)]"
+              >
+                Start Your Branding Journey
+              </Link>
+            </div>
           </div>
         </Container>
       </section>

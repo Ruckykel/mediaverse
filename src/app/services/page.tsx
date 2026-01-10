@@ -45,7 +45,7 @@ export default function ServicesPage() {
                       <p className="mt-1 text-xs md:text-sm text-white/70">{s.desc}</p>
                     </div>
                     <Link href={href} aria-label={`Open ${s.title}`} className="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#00F0FF] text-black hover:brightness-110">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M9 7H17V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /><path d="M9 7H17V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                     </Link>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export default function ServicesPage() {
           <div className="mt-10">
             <h3 className="text-xl md:text-2xl font-extrabold">Your Story Deserves a Cinematic Touch.</h3>
             <p className="mt-2 text-sm md:text-base text-white/70">Let’s craft something unforgettable — from concept to post-production.</p>
-            <Link href="/contact" className="mt-4 inline-flex items-center rounded-full bg-[#00F0FF] px-6 py-3 text-sm font-semibold text-black hover:brightness-110">Start Your Project</Link>
+            <Link href="/contact#contact-form" className="mt-4 inline-flex items-center rounded-full bg-[#00F0FF] px-6 py-3 text-sm font-semibold text-black hover:brightness-110">Start Your Project</Link>
           </div>
         </Container>
       </section>
@@ -321,7 +321,7 @@ export default function ServicesPage() {
             <div className="pointer-events-none absolute -right-20 -bottom-10 h-56 w-56 rounded-full bg-[#00F0FF]/10 blur-3xl" aria-hidden="true" />
             <h2 className="text-3xl md:text-4xl font-extrabold">Your Story Deserves a Cinematic Touch.</h2>
             <p className="mx-auto mt-2 max-w-2xl text-sm md:text-base text-white/70">Let’s craft something unforgettable — from concept to post-production.</p>
-            <Link href="/contact" className="mt-6 inline-flex items-center justify-center rounded-full bg-[#00F0FF] px-6 py-3 text-sm font-semibold text-black hover:brightness-110">Start Your Project</Link>
+            <Link href="/contact#contact-form" className="mt-6 inline-flex items-center justify-center rounded-full bg-[#00F0FF] px-6 py-3 text-sm font-semibold text-black hover:brightness-110">Start Your Project</Link>
           </div>
         </Container>
       </section>

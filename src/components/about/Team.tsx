@@ -15,12 +15,34 @@ type Member = {
 };
 
 const members: Member[] = [
-  { name: "Lisa Thompson", role: "Customer Success Manager", bio: "Dedicated to ensuring customer satisfaction and success, with a proactive approach to client support and retention.", img: "/sample1.webp", linkedin: "#", instagram: "#" },
-  { name: "Laura Davis", role: "COO", bio: "Operations specialist with a background in scaling startups and efficient company operations.", img: "/sample2.webp", linkedin: "#", twitter: "#" },
-  { name: "Tom White", role: "Head of Product", bio: "Passionate about user-centric products and market-fit innovation.", img: "/sample1.webp", linkedin: "#", instagram: "#" },
-  { name: "James Wilson", role: "CTO", bio: "Technical leader focused on secure, scalable cloud-based applications.", img: "/sample2.webp", linkedin: "#", twitter: "#" },
-  { name: "Sarah Williams", role: "Director of Sales", bio: "Sales strategist with a proven record of expanding market reach and driving revenue growth.", img: "/sample1.webp", linkedin: "#", instagram: "#" },
-  { name: "David Miller", role: "Lead Software Engineer", bio: "Senior developer with a knack for robust architectures and mentoring engineering teams.", img: "/sample2.webp", linkedin: "#", twitter: "#" },
+  {
+    name: "Collins Nnaji",
+    role: "Data Analytics & Architecture Specialist",
+    bio: "Experienced in designing, implementing, and optimizing data-driven solutions. Skilled in SQL, Power BI, Azure, Python, and Power Automate, with expertise in data engineering and cloud architecture.",
+    img: "/Collins.png",
+    linkedin: "https://www.linkedin.com/in/collins-nnaji"
+  },
+  {
+    name: "Joshua Omoraiyewa",
+    role: "Solutions & Enterprise Architect",
+    bio: "Experienced in Cloud computing, DevOps, and Security, driving digital transformation for diverse products. Specializes in Microsoft Azure and AWS solutions that align with business requirements.",
+    img: "/Joshua.png",
+    linkedin: "https://www.linkedin.com/in/omoraiyewa-joshua"
+  },
+  {
+    name: "Peace Nnaji",
+    role: "Digital Marketer & Social Media Manager",
+    bio: "Strategic digital marketer with expertise in social media management, content strategy, and brand growth across multiple platforms.",
+    img: "/Peace.png",
+    linkedin: "https://www.linkedin.com/in/peace-nnaji-164682326"
+  },
+  {
+    name: "Favour Nnaji",
+    role: "Product Designer & Web Developer",
+    bio: "Creative product designer and web developer focused on crafting intuitive user experiences and building responsive, modern web applications.",
+    img: "/Favour.png",
+    linkedin: "https://www.linkedin.com/in/favour-nnaji-b585073a5"
+  },
 ];
 
 export function Team() {

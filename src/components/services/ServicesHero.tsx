@@ -21,7 +21,7 @@ export function ServicesHero() {
               From production and branding to marketing and web, we craft end‑to‑end solutions that tell your story, elevate your brand, and drive results.
             </p>
             <div className="mt-8">
-              <Button href="#digital-media" className="!bg-[#00F0FF] !text-black">Explore Services</Button>
+              <Button href="#works" className="!bg-[#00F0FF] !text-black">Explore Our Work</Button>
             </div>
           </div>
         </div>

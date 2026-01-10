@@ -1,134 +1,177 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "../../../components/Container";
-import { Button } from "../../../components/Button";
+import { FaCamera, FaVideo, FaLightbulb, FaMicrophone } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Event Coverage — Weddings, Birthdays & Corporate — Mediaverse",
-  description:
-    "Professional photography and videography for weddings, birthdays, concerts, and corporate events.",
+  title: "Event Coverage — Professional Photography & Videography | Mediaverse",
+  description: "Professional event photography and videography for weddings, corporate events, concerts, and more.",
 };
+
+const services = [
+  {
+    icon: FaCamera,
+    title: "Photography Coverage",
+    description: "Capture every moment that matters. Our photographers blend into your event while capturing stunning, candid, and posed shots.",
+    features: ["Wedding Photography", "Corporate Events", "Concerts & Festivals", "Portrait Sessions"],
+    gradient: "from-amber-500/20 to-yellow-500/20",
+  },
+  {
+    icon: FaVideo,
+    title: "Videography & Filming",
+    description: "Cinematic event documentation that tells your story. From highlight reels to full-length films, we capture the essence of your event.",
+    features: ["Wedding Films", "Event Highlights", "Documentary Style", "Live Streaming"],
+    gradient: "from-rose-500/20 to-pink-500/20",
+  },
+  {
+    icon: FaLightbulb,
+    title: "Lighting & Production",
+    description: "Professional lighting setups that enhance the visual quality of your event coverage, ensuring perfect shots in any environment.",
+    features: ["Studio Lighting", "On-Location Setup", "Stage Lighting", "Ambient Enhancement"],
+    gradient: "from-cyan-500/20 to-blue-500/20",
+  },
+  {
+    icon: FaMicrophone,
+    title: "Audio & Interviews",
+    description: "Crystal-clear audio capture for speeches, interviews, and ambient sound that complements your visual content.",
+    features: ["Speech Recording", "Guest Interviews", "Ambient Audio", "Sound Mixing"],
+    gradient: "from-green-500/20 to-emerald-500/20",
+  },
+];
+
+const eventTypes = [
+  "Weddings", "Corporate Events", "Conferences", "Product Launches",
+  "Birthday Parties", "Concerts", "Graduations", "Award Ceremonies"
+];
 
 export default function EventCoveragePage() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="relative isolate overflow-hidden">
+    <main className="overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[80vh] flex items-center">
         <div className="absolute inset-0 -z-10">
-          <Image src="/sample1.webp" alt="Event montage" fill priority className="object-cover" />
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[rgb(var(--color-bg))]" />
+          <Image src="/sample1.webp" alt="Event coverage" fill priority className="object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--color-bg))] via-transparent to-transparent" />
         </div>
-        <Container className="py-24 md:py-36">
+
+        <div className="absolute top-20 right-10 w-72 h-72 bg-amber-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl" />
+
+        <Container className="relative z-10 py-20">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white">Event coverage that tells your story.</h1>
-            <p className="mt-6 text-lg text-white/90">
-              Weddings, corporate, concerts, and private events — photography, video, drone, and post-production.
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 mb-6">
+              <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+              <span className="text-sm text-amber-400 font-medium">Event Coverage</span>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+              Capture Every{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">
+                Unforgettable Moment
+              </span>
+            </h1>
+
+            <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
+              Professional photography and videography that preserves your special moments forever. We capture the emotion, energy, and essence of every event.
             </p>
-            <div className="mt-10 flex items-center gap-4">
-              <Button href="/contact?service=Event%20Coverage" className="bg-accent text-white hover:brightness-110 focus-visible:ring-accent">
-                Book Your Date
-              </Button>
-              <Button href="#packages" variant="secondary" className="border-border hover:bg-white/10 text-white">
-                See Packages
-              </Button>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/contact#contact-form"
+                className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-semibold hover:brightness-110 transition-all shadow-[0_0_30px_rgba(245,158,11,0.3)]"
+              >
+                Book Your Event
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-all"
+              >
+                View Gallery
+              </Link>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* What's Included */}
-      <section className="py-16">
+      {/* Event Types */}
+      <section className="py-12 border-y border-white/10 bg-gradient-to-r from-amber-500/5 via-yellow-500/5 to-amber-500/5">
         <Container>
-          <h2 className="text-2xl md:text-3xl font-bold">Every moment, professionally captured.</h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              "Pre-event consultation & timeline planning",
-              "Professional photographers & videographers",
-              "Multi-camera coverage (optional tiers)",
-              "Drone footage (where permitted)",
-              "Edited highlights & full event video",
-              "High-quality color grading & audio mixing",
-              "Private online gallery delivery",
-            ].map((item) => (
-              <div key={item} className="relative overflow-hidden rounded-lg border border-border/60 bg-elevated/60 p-6 shadow-card backdrop-blur">
-                <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-accent/10 blur-2xl" />
-                <p className="text-sm">{item}</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            {eventTypes.map((type) => (
+              <div key={type} className="px-6 py-3 rounded-full border border-amber-500/20 bg-amber-500/5 text-amber-400 text-sm font-medium">
+                {type}
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* Packages */}
-      <section id="packages" className="py-16">
+      {/* Services Grid */}
+      <section className="py-20 md:py-32">
         <Container>
-          <h2 className="text-2xl md:text-3xl font-bold">Choose the perfect coverage.</h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Basic",
-                lines: ["1 Photographer", "4 hours coverage", "100 edited photos", "3–4 min highlight video", "Delivery in 7 days", "2 revisions"],
-                price: "from ₦100,000",
-              },
-              {
-                title: "Standard",
-                lines: ["1 Photographer + 1 Videographer", "6 hours coverage", "200 edited photos", "5–7 min highlight + teaser", "Drone add-on", "3 revisions"],
-                price: "from ₦180,000",
-              },
-              {
-                title: "Premium",
-                lines: ["Full-day (up to 12h)", "2 photographers + 2 videographers", "400+ edited photos", "10–12 min documentary", "Drone + pre-event shoot", "5 revisions"],
-                price: "custom quote",
-              },
-              {
-                title: "Corporate / Brand",
-                lines: ["Multi-cam setup", "Interviews & b-roll", "Highlight reel", "Sound sync", "Logo intro/outro"],
-                price: "tailored per project",
-              },
-            ].map((card) => (
-              <div key={card.title} className="relative overflow-hidden rounded-lg border border-border/60 bg-elevated/60 p-6 shadow-card backdrop-blur flex flex-col">
-                <div className="pointer-events-none absolute -right-8 bottom-0 h-24 w-24 rounded-full bg-accent/10 blur-2xl" />
-                <h3 className="text-lg font-semibold">{card.title} Package</h3>
-                <ul className="mt-3 space-y-2 text-sm text-muted">
-                  {card.lines.map((l) => (
-                    <li key={l}>• {l}</li>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-amber-400 font-semibold text-sm tracking-wider uppercase">Our Services</p>
+            <h2 className="mt-4 text-3xl md:text-5xl font-extrabold">
+              Complete Event Coverage Solutions
+            </h2>
+            <p className="mt-4 text-white/70">
+              From intimate gatherings to large-scale productions, we have the team and equipment to capture it all.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className={`group relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br ${service.gradient} backdrop-blur-sm hover:border-amber-500/30 transition-all duration-300`}
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 mb-6">
+                  <service.icon className="w-6 h-6 text-amber-400" />
+                </div>
+
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-white/70 mb-6">{service.description}</p>
+
+                <div className="space-y-3">
+                  {service.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                      <span className="text-sm text-white/80">{feature}</span>
+                    </div>
                   ))}
-                </ul>
-                <div className="mt-4 text-accent font-semibold">{card.price}</div>
+                </div>
               </div>
             ))}
-          </div>
-          <div className="mt-8 flex items-center gap-4">
-            <Button href="/contact?service=Event%20Coverage" className="bg-accent text-white hover:brightness-110">Book a Package</Button>
-            <Button href="/contact?type=quote&service=Event%20Coverage" variant="secondary" className="border-border text-white hover:bg-white/10">Request a Custom Quote</Button>
           </div>
         </Container>
       </section>
 
-      {/* Add-ons & Timeline */}
-      <section className="py-16">
+      {/* CTA Section */}
+      <section className="py-20 md:py-32">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-            <div className="relative overflow-hidden rounded-lg border border-border/60 bg-elevated/60 p-6 shadow-card backdrop-blur">
-              <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-accent/10 blur-2xl" />
-              <h3 className="text-lg font-semibold">Add-ons</h3>
-              <ul className="mt-3 space-y-2 text-sm text-muted">
-                <li>• Livestreaming setup</li>
-                <li>• Extra hours of coverage</li>
-                <li>• Physical photo album</li>
-                <li>• 24-hour express delivery option</li>
-              </ul>
-            </div>
-            <div className="relative overflow-hidden rounded-lg border border-border/60 bg-elevated/60 p-6 shadow-card backdrop-blur">
-              <div className="pointer-events-none absolute -left-10 -top-10 h-32 w-32 rounded-full bg-accent/10 blur-2xl" />
-              <h3 className="text-lg font-semibold">How it works</h3>
-              <ol className="mt-3 space-y-3 text-sm text-muted">
-                <li>1) Book Your Date — secure slot with 30% deposit</li>
-                <li>2) Pre-Event Consultation — schedule, key shots, vision</li>
-                <li>3) Shoot Day — crew arrives early for setup</li>
-                <li>4) Editing & Delivery — preview in 7–14 days</li>
-              </ol>
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-amber-900/50 to-yellow-900/50 border border-white/10">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-72 h-72 bg-yellow-500/20 rounded-full blur-3xl" />
+
+            <div className="relative z-10 p-12 md:p-20 text-center">
+              <h2 className="text-3xl md:text-5xl font-extrabold">
+                Your Event Deserves{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">Professional Coverage</span>
+              </h2>
+              <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
+                Let us capture the moments that matter most. Book your event coverage today.
+              </p>
+              <Link
+                href="/contact#contact-form"
+                className="mt-8 inline-flex items-center gap-2 px-10 py-4 rounded-full bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-bold text-lg hover:brightness-110 transition-all shadow-[0_0_40px_rgba(245,158,11,0.4)]"
+              >
+                Book Now
+              </Link>
             </div>
           </div>
         </Container>
@@ -136,5 +179,3 @@ export default function EventCoveragePage() {
     </main>
   );
 }
-
-

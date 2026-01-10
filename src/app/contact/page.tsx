@@ -3,6 +3,7 @@ import { Container } from "../../components/Container";
 import Link from "next/link";
 import { MdEmail, MdAccessTime } from "react-icons/md";
 import { FaPhone, FaInstagram, FaLinkedin, FaXTwitter, FaYoutube, FaTiktok } from "react-icons/fa6";
+import { ContactForm } from "../../components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact — Mediaverse",
@@ -64,34 +65,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right: form */}
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 md:p-8">
-              <h3 className="text-lg font-extrabold">Send Us a Message</h3>
-              <form className="mt-6 space-y-4">
-                <div>
-                  <label className="sr-only">Full Name</label>
-                  <input className="w-full rounded-md border border-white/10 bg-bg px-3 py-2 text-sm outline-none focus:border-[#00F0FF]" placeholder="Full Name" />
-                </div>
-                <div>
-                  <label className="sr-only">Email Address</label>
-                  <input type="email" className="w-full rounded-md border border-white/10 bg-bg px-3 py-2 text-sm outline-none focus:border-[#00F0FF]" placeholder="Email Address" />
-                </div>
-                <div>
-                  <label className="sr-only">Subject / Service Type</label>
-                  <select className="w-full rounded-md border border-white/10 bg-bg px-3 py-2 text-sm outline-none focus:border-[#00F0FF]">
-                    <option>Subject / Service Type</option>
-                    <option>Video</option>
-                    <option>Branding</option>
-                    <option>Web</option>
-                    <option>Marketing</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="sr-only">Message</label>
-                  <textarea rows={5} className="w-full rounded-md border border-white/10 bg-bg px-3 py-2 text-sm outline-none focus:border-[#00F0FF]" placeholder="Message" />
-                </div>
-                <button type="submit" className="inline-flex items-center rounded-full bg-[#00F0FF] px-5 py-2.5 text-sm font-semibold text-black hover:brightness-110">Send Message</button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </Container>
       </section>

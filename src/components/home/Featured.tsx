@@ -14,20 +14,45 @@ const websites = [
   { title: "Convivia 24", href: "https://convivia24.com/", img: "/convivia24.png", tag: "Website" },
 ];
 
-const placeholder = (label: string) =>
-  Array.from({ length: 6 }).map((_, i) => ({
-    title: `${label} ${i + 1}`,
-    href: "/portfolio",
-    img: i % 2 === 0 ? "/sample1.webp" : "/sample2.webp",
-    tag: label,
-  }));
+// Media & Content categories (videography/photography coverage)
+const mediaContent = [
+  { title: "Wedding Coverage", href: "/portfolio", img: "/sample1.webp", tag: "Media" },
+  { title: "Birthday Events", href: "/portfolio", img: "/sample2.webp", tag: "Media" },
+  { title: "Corporate Events", href: "/portfolio", img: "/sample1.webp", tag: "Media" },
+  { title: "Product Shoots", href: "/portfolio", img: "/sample2.webp", tag: "Media" },
+  { title: "Commercial Ads", href: "/portfolio", img: "/sample1.webp", tag: "Media" },
+  { title: "Documentary", href: "/portfolio", img: "/sample2.webp", tag: "Media" },
+  { title: "Music Videos", href: "/portfolio", img: "/sample1.webp", tag: "Media" },
+];
+
+// Graphics/Product Design categories
+const graphicsDesign = [
+  { title: "Album Cover Art", href: "/portfolio", img: "/sample2.webp", tag: "Graphics" },
+  { title: "Flyers & Posters", href: "/portfolio", img: "/sample1.webp", tag: "Graphics" },
+  { title: "Social Media Posters", href: "/portfolio", img: "/sample2.webp", tag: "Graphics" },
+  { title: "Infographics", href: "/portfolio", img: "/sample1.webp", tag: "Graphics" },
+  { title: "UI/UX Design", href: "/portfolio", img: "/sample2.webp", tag: "Graphics" },
+  { title: "Brand Identity", href: "/portfolio", img: "/sample1.webp", tag: "Graphics" },
+  { title: "Product Mockups", href: "/portfolio", img: "/sample2.webp", tag: "Graphics" },
+];
+
+// Video Editing categories
+const videoEditing = [
+  { title: "Content Reels", href: "/portfolio", img: "/sample1.webp", tag: "Video" },
+  { title: "Ads Editing", href: "/portfolio", img: "/sample2.webp", tag: "Video" },
+  { title: "Animation Flyers", href: "/portfolio", img: "/sample1.webp", tag: "Video" },
+  { title: "Motion Graphics", href: "/portfolio", img: "/sample2.webp", tag: "Video" },
+  { title: "Color Grading", href: "/portfolio", img: "/sample1.webp", tag: "Video" },
+  { title: "Short Films", href: "/portfolio", img: "/sample2.webp", tag: "Video" },
+  { title: "YouTube Editing", href: "/portfolio", img: "/sample1.webp", tag: "Video" },
+];
 
 export function Featured() {
   const tabs = useMemo(() => [
     { key: "web", label: "Websites", items: websites },
-    { key: "events", label: "Events", items: placeholder("Event") },
-    { key: "design", label: "Design", items: placeholder("Design") },
-    { key: "video", label: "Video", items: placeholder("Video") },
+    { key: "media", label: "Media & Content", items: mediaContent },
+    { key: "design", label: "Graphics/Product Design", items: graphicsDesign },
+    { key: "video", label: "Video Editing", items: videoEditing },
   ], []);
   const [active, setActive] = useState("web");
   const activeItems = tabs.find(t => t.key === active)?.items ?? websites;
@@ -61,7 +86,7 @@ export function Featured() {
 
         {/* Sliding segmented control */}
         <div className="mt-8">
-          <div className="relative mx-auto w-full max-w-2xl rounded-full bg-white/5 ring-1 ring-white/10 shadow-card px-1 py-1">
+          <div className="relative mx-auto w-full max-w-4xl rounded-full bg-white/5 ring-1 ring-white/10 shadow-card px-1 py-1">
             {/* Sliding highlight */}
             <div
               className="pointer-events-none absolute inset-y-1 left-1 w-1/4 rounded-full bg-[#00F0FF] transition-transform duration-200"
@@ -73,7 +98,7 @@ export function Featured() {
                 <button
                   key={t.key}
                   onClick={() => setActive(t.key)}
-                  className={`z-10 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${active === t.key ? "text-black" : "text-white"
+                  className={`z-10 flex items-center justify-center rounded-full px-2 py-2 text-sm font-semibold transition-colors text-center ${active === t.key ? "text-black" : "text-white"
                     }`}
                 >
                   {t.label}

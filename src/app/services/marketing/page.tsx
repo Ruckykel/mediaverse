@@ -1,126 +1,181 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "../../../components/Container";
-import { Button } from "../../../components/Button";
+import { FaHashtag, FaChartLine, FaUsers, FaBullseye } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing & Social Media Strategy | Mediaverse",
-  description: "Professional digital marketing, social media management, and growth strategies.",
+  title: "Digital Marketing & Social Strategy — Mediaverse",
+  description: "Strategic digital marketing, social media management, and growth-focused campaigns.",
 };
 
-const categories = [
+const services = [
   {
-    title: "Social Media Management & Campaign Strategy",
-    description: "We help brands stay consistent and relevant online. From content calendars to campaign strategy, our team manages your social presence with purpose, creativity, and precision.",
-    includes: ["Social Media Setup & Optimization", "Monthly Content Planning", "Campaign Design & Execution", "Audience Engagement & Community Management"],
-    image: "/sample1.webp",
-    layout: "left" // image left, content right
+    icon: FaHashtag,
+    title: "Social Media Management",
+    description: "We help brands stay consistent and relevant online. Our team manages your social presence with purpose, creativity, and precision.",
+    features: ["Social Media Setup & Optimization", "Monthly Content Planning", "Campaign Design & Execution", "Community Management"],
+    gradient: "from-pink-500/20 to-rose-500/20",
   },
   {
-    title: "SEO & Paid Media (Google Ads, Meta Ads)",
-    description: "Visibility drives growth. We use a data-first approach to get your brand seen — improving rankings, generating leads, and maximizing ad spend efficiency.",
-    includes: ["Search Engine Optimization (On-page & Technical)", "Google Ads & Meta Campaigns", "Keyword Strategy & Competitor Analysis", "Conversion Tracking & Reporting"],
-    image: "/sample2.webp",
-    layout: "right" // image right, content left
+    icon: FaChartLine,
+    title: "SEO & Paid Media",
+    description: "Visibility drives growth. We use a data-first approach to get your brand seen — improving rankings and maximizing ad spend efficiency.",
+    features: ["Search Engine Optimization", "Google & Meta Ads", "Keyword Strategy & Analysis", "Conversion Tracking"],
+    gradient: "from-blue-500/20 to-cyan-500/20",
   },
   {
-    title: "Influencer Collaborations & Brand Engagement Campaigns",
-    description: "We connect brands with voices that matter. Through authentic partnerships and creative collaborations, we help you grow your influence and build stronger audience relationships.",
-    includes: ["Influencer Research & Partnerships", "Sponsored Campaign Management", "Product Seeding & PR Coordination", "Engagement & Growth Strategy"],
-    image: "/sample1.webp",
-    layout: "left" // image left, content right
+    icon: FaUsers,
+    title: "Influencer Marketing",
+    description: "We connect brands with voices that matter. Through authentic partnerships, we help you grow your influence and build stronger relationships.",
+    features: ["Influencer Research & Partnerships", "Sponsored Campaign Management", "Product Seeding & PR", "Growth Strategy"],
+    gradient: "from-amber-500/20 to-orange-500/20",
   },
   {
-    title: "Analytics & Performance Optimization",
-    description: "We measure what matters. Our analytics-driven approach ensures every campaign delivers — helping you refine strategies, identify trends, and continuously improve ROI.",
-    includes: ["Real-Time Analytics Dashboards", "Campaign Performance Reports", "A/B Testing & Content Optimization", "Strategy Refinement & Scaling"],
-    image: "/sample2.webp",
-    layout: "right" // image right, content left
-  }
+    icon: FaBullseye,
+    title: "Analytics & Optimization",
+    description: "We measure what matters. Our analytics-driven approach ensures every campaign delivers — helping you refine strategies and improve ROI.",
+    features: ["Real-Time Analytics Dashboards", "Performance Reports", "A/B Testing & Optimization", "Strategy Refinement & Scaling"],
+    gradient: "from-green-500/20 to-emerald-500/20",
+  },
+];
+
+const metrics = [
+  { value: "10M+", label: "Impressions Generated" },
+  { value: "500%", label: "Average ROI" },
+  { value: "200+", label: "Campaigns Launched" },
+  { value: "50+", label: "Brands Scaled" },
 ];
 
 export default function MarketingPage() {
   return (
-    <main>
-      {/* Hero */}
-      <section className="absolute inset-0 z-0">
+    <main className="overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-[80vh] flex items-center">
         <div className="absolute inset-0 -z-10">
-          <Image src="/sample1.webp" alt="Digital marketing strategy" fill priority className="object-cover" />
-          <div className="absolute inset-0 bg-black/65" />
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[rgb(var(--color-bg))]" />
+          <Image src="/sample1.webp" alt="Digital marketing" fill priority className="object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--color-bg))] via-transparent to-transparent" />
         </div>
-        <Container className="h-full flex items-center pt-20 relative z-10">
+
+        <div className="absolute top-20 right-10 w-72 h-72 bg-pink-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-rose-500/10 rounded-full blur-3xl" />
+
+        <Container className="relative z-10 py-20">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white">Visibility Meets Strategy. Engagement Meets Results.</h1>
-            <p className="mt-6 text-lg text-white/90">We don&apos;t just market — we build digital ecosystems that grow with your brand. Our campaigns are crafted to attract, engage, and convert across every platform.</p>
-            <p className="mt-4 text-white/80">In a world of endless noise, your brand&apos;s voice must cut through. At Mediaverse, we combine creative storytelling, performance data, and audience insights to build strategies that drive measurable impact — from awareness to action.</p>
-            <div className="mt-10 flex items-center gap-4">
-              <Button href="/contact?service=Digital%20Marketing%20%26%20Social%20Media%20Strategy" className="!bg-[#00F0FF] !text-black hover:brightness-110">Start Your Campaign</Button>
-              <Button href="/portfolio" variant="secondary" className="border-border text-white hover:bg-white/10">View Portfolio</Button>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/30 mb-6">
+              <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
+              <span className="text-sm text-pink-400 font-medium">Digital Marketing</span>
+            </div>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+              Visibility Meets{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">
+                Strategy & Results
+              </span>
+            </h1>
+
+            <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
+              We don't just market — we build digital ecosystems that grow with your brand. Our campaigns attract, engage, and convert across every platform.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/contact#contact-form"
+                className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold hover:brightness-110 transition-all shadow-[0_0_30px_rgba(236,72,153,0.3)]"
+              >
+                Start Your Campaign
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition-all"
+              >
+                View Case Studies
+              </Link>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Spacer to push content below hero */}
-      <div className="h-screen"></div>
-
-      {/* Categories */}
-      {categories.map((category) => (
-        <section key={category.title} className="py-20">
-          <Container>
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${category.layout === 'right' ? 'lg:grid-flow-col-dense' : ''}`}>
-              {/* Image */}
-              <div className={`relative ${category.layout === 'right' ? 'lg:col-start-2' : ''}`}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                  <Image 
-                    src={category.image} 
-                    alt={category.title} 
-                    fill 
-                    className="object-cover" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                </div>
-                <div className="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-accent/20 blur-2xl" />
-              </div>
-
-              {/* Content */}
-              <div className={`${category.layout === 'right' ? 'lg:col-start-1' : ''}`}>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">{category.title}</h2>
-                <p className="text-lg text-muted mb-8 leading-relaxed">{category.description}</p>
-                
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-accent">Includes:</h3>
-                  <ul className="space-y-3">
-                    {category.includes.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                        <span className="text-muted">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-8">
-                  <Button href="/contact?service=Digital%20Marketing%20%26%20Social%20Media%20Strategy" className="bg-accent text-white hover:brightness-110">
-                    Learn More
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </section>
-      ))}
-
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-accent/10 to-transparent">
+      {/* Metrics Section */}
+      <section className="py-16 border-y border-white/10 bg-gradient-to-r from-pink-500/5 via-rose-500/5 to-pink-500/5">
         <Container>
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Let&apos;s Build a Digital Presence That Performs.</h2>
-            <p className="text-lg text-muted mb-8">Partner with Mediaverse to transform engagement into growth and strategy into success.</p>
-            <Button href="/contact?service=Digital%20Marketing%20%26%20Social%20Media%20Strategy" className="bg-accent text-white hover:brightness-110">
-              Start Your Campaign
-            </Button>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {metrics.map((metric) => (
+              <div key={metric.label} className="text-center">
+                <div className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">{metric.value}</div>
+                <div className="mt-2 text-sm text-white/60">{metric.label}</div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 md:py-32">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-pink-400 font-semibold text-sm tracking-wider uppercase">Our Services</p>
+            <h2 className="mt-4 text-3xl md:text-5xl font-extrabold">
+              Growth-Focused Marketing Solutions
+            </h2>
+            <p className="mt-4 text-white/70">
+              In a world of endless noise, your brand's voice must cut through. We combine creative storytelling with performance data.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className={`group relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br ${service.gradient} backdrop-blur-sm hover:border-pink-500/30 transition-all duration-300`}
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 mb-6">
+                  <service.icon className="w-6 h-6 text-pink-400" />
+                </div>
+
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-white/70 mb-6">{service.description}</p>
+
+                <div className="space-y-3">
+                  {service.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-pink-400" />
+                      <span className="text-sm text-white/80">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 md:py-32">
+        <Container>
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-pink-900/50 to-rose-900/50 border border-white/10">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-72 h-72 bg-rose-500/20 rounded-full blur-3xl" />
+
+            <div className="relative z-10 p-12 md:p-20 text-center">
+              <h2 className="text-3xl md:text-5xl font-extrabold">
+                Let's Build a Digital Presence{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">That Performs</span>
+              </h2>
+              <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
+                Partner with Mediaverse to transform engagement into growth and strategy into success.
+              </p>
+              <Link
+                href="/contact#contact-form"
+                className="mt-8 inline-flex items-center gap-2 px-10 py-4 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-lg hover:brightness-110 transition-all shadow-[0_0_40px_rgba(236,72,153,0.4)]"
+              >
+                Start Your Campaign
+              </Link>
+            </div>
           </div>
         </Container>
       </section>

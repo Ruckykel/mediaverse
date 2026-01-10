@@ -55,8 +55,8 @@ export function Footer() {
             <h4 className="text-sm font-semibold">Contact Us</h4>
             <ul className="mt-4 space-y-2">
               <li className="text-sm text-muted">Lagos, Nigeria</li>
-              <li className="text-sm text-muted flex items-center gap-2"><MdEmail className="h-4 w-4" /> hello@mediaverse.com</li>
-              <li className="text-sm text-muted flex items-center gap-2"><FaPhone className="h-4 w-4" /> +234 (0) 800 000 0000</li>
+              <li className="text-sm text-muted flex items-center gap-2"><MdEmail className="h-4 w-4" /><a href="mailto:hello@mediaverse.com" className="hover:text-[#00F0FF] transition-colors">hello@mediaverse.com</a></li>
+              <li className="text-sm text-muted flex items-center gap-2"><FaPhone className="h-4 w-4" /><a href="tel:+2348000000000" className="hover:text-[#00F0FF] transition-colors">+234 (0) 800 000 0000</a></li>
             </ul>
             <form className="mt-6 flex items-center gap-2">
               <input type="email" placeholder="Your email" className="w-48 rounded-md border border-border bg-bg px-3 py-2 text-sm outline-none focus:border-accent" />

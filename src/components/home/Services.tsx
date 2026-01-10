@@ -132,7 +132,7 @@ export function Services() {
               </ul>
 
               <div className="mt-6 flex justify-center md:justify-start">
-                <Link href={current.href} className="inline-flex items-center rounded-full bg-[#00F0FF] px-4 py-2 text-sm font-semibold text-black hover:brightness-110">Learn More</Link>
+                <Link href="/services" className="inline-flex items-center rounded-full bg-[#00F0FF] px-4 py-2 text-sm font-semibold text-black hover:brightness-110">Learn More</Link>
               </div>
             </div>
           </div>

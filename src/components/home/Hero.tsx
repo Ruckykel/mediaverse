@@ -42,17 +42,16 @@ export function Hero() {
               Mediaverse is a full-scale creative and digital production company helping brands, creators, and businesses tell powerful stories through visuals, design, and technology.
             </p>
             <div className="mt-10 flex items-center gap-4">
-              <Button href="/portfolio" variant="ghost" className="!bg-[#00F0FF] !text-black hover:brightness-110 focus-visible:ring-[#00F0FF] group gap-2">
+              <Button href="#works" variant="ghost" className="!bg-[#00F0FF] !text-black hover:brightness-110 focus-visible:ring-[#00F0FF] group gap-2">
                 <span>Explore Our Work</span>
                 <span aria-hidden="true" className="inline-flex items-center transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
-                  {/* Up-right arrow */}
+                  {/* Down arrow for scrolling */}
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="pointer-events-none">
-                    <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M9 7H17V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </span>
               </Button>
-              <Button href="/contact" variant="secondary" className="hover:bg-elevated/60">
+              <Button href="/contact#contact-form" variant="secondary" className="hover:bg-elevated/60">
                 Book a Consultation
               </Button>
             </div>
@@ -63,11 +62,10 @@ export function Hero() {
                 aria-label="Previous services"
                 disabled={!canPrev}
                 onClick={() => setPageIndex((p) => Math.max(0, p - 1))}
-                className={`h-8 w-8 rounded-full disabled:opacity-40 disabled:cursor-not-allowed transition-colors ${
-                  canPrev
+                className={`h-8 w-8 rounded-full disabled:opacity-40 disabled:cursor-not-allowed transition-colors ${canPrev
                     ? "text-[#00F0FF] border border-[#00F0FF]/50 bg-[#00F0FF]/10 hover:bg-[#00F0FF]/20"
                     : "border border-white/15 bg-white/5 text-white/60"
-                }`}
+                  }`}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto">
                   <path d="M15 6L9 12L15 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -77,11 +75,10 @@ export function Hero() {
                 aria-label="Next services"
                 disabled={!canNext}
                 onClick={() => setPageIndex((p) => Math.min(pages.length - 1, p + 1))}
-                className={`h-8 w-8 rounded-full disabled:opacity-40 disabled:cursor-not-allowed transition-colors ${
-                  canNext
+                className={`h-8 w-8 rounded-full disabled:opacity-40 disabled:cursor-not-allowed transition-colors ${canNext
                     ? "text-[#00F0FF] border border-[#00F0FF]/50 bg-[#00F0FF]/10 hover:bg-[#00F0FF]/20"
                     : "border border-white/15 bg-white/5 text-white/60"
-                }`}
+                  }`}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto">
                   <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
