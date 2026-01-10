@@ -76,7 +76,7 @@ export default function MarketingPage() {
             </h1>
 
             <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
-              We don't just market — we build digital ecosystems that grow with your brand. Our campaigns attract, engage, and convert across every platform.
+              We don&apos;t just market — we build digital ecosystems that grow with your brand. Our campaigns attract, engage, and convert across every platform.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -123,7 +123,7 @@ export default function MarketingPage() {
               Growth-Focused Marketing Solutions
             </h2>
             <p className="mt-4 text-white/70">
-              In a world of endless noise, your brand's voice must cut through. We combine creative storytelling with performance data.
+              In a world of endless noise, your brand&apos;s voice must cut through. We combine creative storytelling with performance data.
             </p>
           </div>
 
@@ -163,7 +163,7 @@ export default function MarketingPage() {
 
             <div className="relative z-10 p-12 md:p-20 text-center">
               <h2 className="text-3xl md:text-5xl font-extrabold">
-                Let's Build a Digital Presence{" "}
+                Let&apos;s Build a Digital Presence{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">That Performs</span>
               </h2>
               <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">

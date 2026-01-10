@@ -34,7 +34,7 @@ const services = [
   {
     icon: FaServer,
     title: "Hosting & Maintenance",
-    description: "Our job doesn't end after launch. We keep your website running smoothly, securely, and efficiently with 24/7 uptime.",
+    description: "Our job doesn&apos;t end after launch. We keep your website running smoothly, securely, and efficiently with 24/7 uptime.",
     features: ["Secure Hosting & Domains", "Regular Updates & Backups", "Performance Monitoring", "Technical Support"],
     gradient: "from-cyan-500/20 to-sky-500/20",
   },
@@ -79,7 +79,7 @@ export default function WebPage() {
             </h1>
 
             <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
-              We design and develop websites and interactive experiences that don't just look good — they work beautifully. Every click, scroll, and animation is built to connect.
+              We design and develop websites and interactive experiences that don&apos;t just look good — they work beautifully. Every click, scroll, and animation is built to connect.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -163,7 +163,7 @@ export default function WebPage() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-emerald-400 font-semibold text-sm tracking-wider uppercase">Recent Projects</p>
             <h2 className="mt-4 text-3xl md:text-5xl font-extrabold">
-              Websites We've Built
+              Websites We&apos;ve Built
             </h2>
           </div>
 
@@ -203,7 +203,7 @@ export default function WebPage() {
                 href="/contact#contact-form"
                 className="mt-8 inline-flex items-center gap-2 px-10 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg hover:brightness-110 transition-all shadow-[0_0_40px_rgba(16,185,129,0.4)]"
               >
-                Let's Build Your Website
+                Let&apos;s Build Your Website
               </Link>
             </div>
           </div>

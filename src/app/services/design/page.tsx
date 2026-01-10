@@ -146,7 +146,7 @@ export default function DesignPage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-500">Beautiful?</span>
               </h2>
               <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-                Let's design visuals that captivate your audience and elevate your brand.
+                Let&apos;s design visuals that captivate your audience and elevate your brand.
               </p>
               <Link
                 href="/contact#contact-form"

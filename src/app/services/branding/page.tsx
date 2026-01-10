@@ -145,7 +145,7 @@ export default function BrandingPage() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-purple-400 font-semibold text-sm tracking-wider uppercase">Our Work</p>
             <h2 className="mt-4 text-3xl md:text-5xl font-extrabold">
-              Brands We've Transformed
+              Brands We&apos;ve Transformed
             </h2>
           </div>
 
@@ -179,7 +179,7 @@ export default function BrandingPage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Reimagined.</span>
               </h2>
               <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-                Let's design something extraordinary — built for the now, crafted to last.
+                Let&apos;s design something extraordinary — built for the now, crafted to last.
               </p>
               <Link
                 href="/contact#contact-form"

@@ -131,7 +131,7 @@ export default function DigitalMediaPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {services.map((service, idx) => (
+            {services.map((service) => (
               <div
                 key={service.title}
                 className={`group relative p-8 rounded-3xl border border-white/10 bg-gradient-to-br ${service.gradient} backdrop-blur-sm hover:border-[#00F0FF]/30 transition-all duration-300`}
@@ -212,7 +212,7 @@ export default function DigitalMediaPage() {
                 <span className="text-[#00F0FF]">Extraordinary?</span>
               </h2>
               <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-                Let's craft content that captivates your audience and elevates your brand to new heights.
+                Let&apos;s craft content that captivates your audience and elevates your brand to new heights.
               </p>
               <Link
                 href="/contact#contact-form"

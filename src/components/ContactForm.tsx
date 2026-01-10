@@ -53,7 +53,7 @@ export function ContactForm() {
                         </svg>
                     </div>
                     <h3 className="text-xl font-extrabold text-[#00F0FF]">Message Sent!</h3>
-                    <p className="mt-2 text-white/70">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                    <p className="mt-2 text-white/70">Thank you for reaching out. We&apos;ll get back to you within 24 hours.</p>
                     <button
                         onClick={() => setStatus("idle")}
                         className="mt-4 text-sm text-[#00F0FF] hover:underline"
