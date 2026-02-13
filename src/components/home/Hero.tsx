@@ -63,8 +63,8 @@ export function Hero() {
                 disabled={!canPrev}
                 onClick={() => setPageIndex((p) => Math.max(0, p - 1))}
                 className={`h-8 w-8 rounded-full disabled:opacity-40 disabled:cursor-not-allowed transition-colors ${canPrev
-                    ? "text-[#00F0FF] border border-[#00F0FF]/50 bg-[#00F0FF]/10 hover:bg-[#00F0FF]/20"
-                    : "border border-white/15 bg-white/5 text-white/60"
+                  ? "text-[#00F0FF] border border-[#00F0FF]/50 bg-[#00F0FF]/10 hover:bg-[#00F0FF]/20"
+                  : "border border-white/15 bg-white/5 text-white/60"
                   }`}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto">
@@ -76,8 +76,8 @@ export function Hero() {
                 disabled={!canNext}
                 onClick={() => setPageIndex((p) => Math.min(pages.length - 1, p + 1))}
                 className={`h-8 w-8 rounded-full disabled:opacity-40 disabled:cursor-not-allowed transition-colors ${canNext
-                    ? "text-[#00F0FF] border border-[#00F0FF]/50 bg-[#00F0FF]/10 hover:bg-[#00F0FF]/20"
-                    : "border border-white/15 bg-white/5 text-white/60"
+                  ? "text-[#00F0FF] border border-[#00F0FF]/50 bg-[#00F0FF]/10 hover:bg-[#00F0FF]/20"
+                  : "border border-white/15 bg-white/5 text-white/60"
                   }`}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto">
@@ -111,7 +111,7 @@ export function Hero() {
             {/* Decorative ring */}
             <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-tr from-accent/25 via-transparent to-transparent blur-2xl" aria-hidden="true" />
             <div className="relative h-[220px] w-[220px] md:h-[340px] md:w-[340px] lg:h-[420px] lg:w-[420px] overflow-hidden rounded-full ring-1 ring-border/60 shadow-elevated">
-              <Image src="/sample2.webp" alt="Showreel placeholder" fill priority className="object-cover" />
+              <Image src="/sample2.webp" alt="Showreel placeholder" fill priority sizes="(max-width: 768px) 220px, (max-width: 1024px) 340px, 420px" className="object-cover" />
             </div>
           </div>
         </div>

@@ -12,6 +12,8 @@ const websites = [
   { title: "Standex Digital", href: "https://standexdigital.com/", img: "/standex.png", tag: "Website" },
   { title: "BoxOutAfrica", href: "https://www.boxoutafrica.com/", img: "/boxoutafrica.png", tag: "Website" },
   { title: "Convivia 24", href: "https://convivia24.com/", img: "/convivia24.png", tag: "Website" },
+  { title: "AccurateCV", href: "https://accuratecv.com/", img: "/accuratecv.png", tag: "Website" },
+  { title: "SkilledJobsLive", href: "https://skilledjobslive.com/", img: "/skilledjobslive.png", tag: "Website" },
 ];
 
 // Media & Content categories (videography/photography coverage)
@@ -74,6 +76,8 @@ export function Featured() {
     "Standex Digital": "Digital solutions platform",
     BoxOutAfrica: "Funding platform for African innovation",
     "Convivia 24": "Event and experiences portal",
+    AccurateCV: "Professional CV builder platform",
+    SkilledJobsLive: "Global career & visa sponsorship platform",
   };
 
   return (
@@ -136,7 +140,7 @@ export function Featured() {
                     <div className="absolute inset-0 translate-y-6 scale-[0.96] rounded-2xl bg-white/5" aria-hidden="true" />
                     <div className="relative overflow-hidden rounded-2xl">
                       <div className="relative aspect-[16/9] w-full overflow-hidden">
-                        <Image src={item.img} alt={item.title} fill className="object-cover" />
+                        <Image src={item.img} alt={item.title} fill sizes="(max-width: 640px) 260px, (max-width: 1024px) 320px, 360px" className="object-cover" />
                       </div>
                     </div>
                   </div>

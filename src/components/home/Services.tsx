@@ -93,7 +93,7 @@ export function Services() {
           <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {/* Left: media */}
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-white/10 bg-white/5 ring-1 ring-[#00F0FF]/10 shadow-[0_0_24px_rgba(0,240,255,0.08)]">
-              <Image src={index % 2 === 0 ? "/sample1.webp" : "/sample2.webp"} alt={current.title} fill className="object-cover" />
+              <Image src={index % 2 === 0 ? "/sample1.webp" : "/sample2.webp"} alt={current.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
             </div>
 
             {/* Right: text + tabs */}

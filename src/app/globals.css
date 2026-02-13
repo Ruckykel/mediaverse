@@ -57,6 +57,7 @@ body {
               radial-gradient(500px 500px at 90% 20%, rgba(99,102,241,0.10), rgba(99,102,241,0) 60%),
               radial-gradient(700px 700px at 50% 110%, rgba(56,189,248,0.12), rgba(56,189,248,0) 60%);
   filter: blur(48px) saturate(110%);
+  will-change: transform;
 }
 
 /* Navbar link heartbeat underline */
