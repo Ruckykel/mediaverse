@@ -64,9 +64,9 @@ export default function ServicesPage() {
       {/* Bottom CTA */}
       <section className="py-16">
         <Container>
-          <div className="relative text-center">
-            <div className="pointer-events-none absolute -left-24 -top-12 h-56 w-56 rounded-full bg-[#00F0FF]/10 blur-3xl" aria-hidden="true" />
-            <div className="pointer-events-none absolute -right-20 -bottom-10 h-56 w-56 rounded-full bg-[#00F0FF]/10 blur-3xl" aria-hidden="true" />
+          <div className="relative text-center overflow-hidden rounded-2xl py-12 px-6">
+            <div className="pointer-events-none absolute -left-12 -top-12 h-40 w-40 md:h-56 md:w-56 rounded-full bg-[#00F0FF]/10 blur-3xl" aria-hidden="true" />
+            <div className="pointer-events-none absolute -right-12 -bottom-10 h-40 w-40 md:h-56 md:w-56 rounded-full bg-[#00F0FF]/10 blur-3xl" aria-hidden="true" />
             <h2 className="text-3xl md:text-4xl font-extrabold">Your Story Deserves a Cinematic Touch.</h2>
             <p className="mx-auto mt-2 max-w-2xl text-sm md:text-base text-white/70">Let&apos;s craft something unforgettable — from concept to post-production.</p>
             <Link href="/contact#contact-form" className="mt-6 inline-flex items-center justify-center rounded-full bg-[#00F0FF] px-6 py-3 text-sm font-semibold text-black hover:brightness-110">Start Your Project</Link>

@@ -90,7 +90,19 @@ export function Featured() {
 
         {/* Sliding segmented control */}
         <div className="mt-8">
-          <div className="relative mx-auto w-full max-w-4xl rounded-full bg-white/5 ring-1 ring-white/10 shadow-card px-1 py-1">
+          {/* Mobile: simple button row that wraps; Desktop: pill slider */}
+          <div className="flex md:hidden flex-wrap gap-2 justify-center">
+            {tabs.map((t) => (
+              <button
+                key={t.key}
+                onClick={() => setActive(t.key)}
+                className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${active === t.key ? "bg-[#00F0FF] text-black" : "bg-white/5 text-white ring-1 ring-white/10"}`}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
+          <div className="hidden md:block relative mx-auto w-full max-w-4xl rounded-full bg-white/5 ring-1 ring-white/10 shadow-card px-1 py-1">
             {/* Sliding highlight */}
             <div
               className="pointer-events-none absolute inset-y-1 left-1 w-1/4 rounded-full bg-[#00F0FF] transition-transform duration-200"
@@ -102,8 +114,7 @@ export function Featured() {
                 <button
                   key={t.key}
                   onClick={() => setActive(t.key)}
-                  className={`z-10 flex items-center justify-center rounded-full px-2 py-2 text-sm font-semibold transition-colors text-center ${active === t.key ? "text-black" : "text-white"
-                    }`}
+                  className={`z-10 flex items-center justify-center rounded-full px-2 py-2 text-sm font-semibold transition-colors text-center ${active === t.key ? "text-black" : "text-white"}`}
                 >
                   {t.label}
                 </button>

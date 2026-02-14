@@ -49,15 +49,15 @@ export default function EventCoveragePage() {
   return (
     <main className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center">
+      <section className="relative min-h-[60vh] md:min-h-[80vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image src="/sample1.webp" alt="Event coverage" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/50" />
           <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--color-bg))] via-transparent to-transparent" />
         </div>
 
-        <div className="absolute top-20 right-10 w-72 h-72 bg-amber-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-0 w-48 h-48 md:w-72 md:h-72 bg-amber-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 left-0 w-48 h-48 md:w-96 md:h-96 bg-yellow-500/10 rounded-full blur-3xl" />
 
         <Container className="relative z-10 py-20">
           <div className="max-w-3xl">
@@ -66,7 +66,7 @@ export default function EventCoveragePage() {
               <span className="text-sm text-amber-400 font-medium">Event Coverage</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold leading-tight">
               Capture Every{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">
                 Unforgettable Moment
@@ -155,10 +155,10 @@ export default function EventCoveragePage() {
       <section className="py-20 md:py-32">
         <Container>
           <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-amber-900/50 to-yellow-900/50 border border-white/10">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-72 h-72 bg-yellow-500/20 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-amber-500/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-36 h-36 md:w-72 md:h-72 bg-yellow-500/20 rounded-full blur-3xl" />
 
-            <div className="relative z-10 p-12 md:p-20 text-center">
+            <div className="relative z-10 p-6 py-10 md:p-20 text-center">
               <h2 className="text-3xl md:text-5xl font-extrabold">
                 Your Event Deserves{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">Professional Coverage</span>

@@ -27,12 +27,12 @@ export function Hero() {
   const visibleServices = pages[pageIndex] ?? servicesData.slice(0, 2);
 
   return (
-    <section className="relative isolate -mt-16 pt-16 md:pt-20 h-screen overflow-hidden" aria-label="Hero">
+    <section className="relative isolate -mt-16 pt-24 md:pt-28 pb-12 md:pb-20 min-h-[100dvh] overflow-hidden" aria-label="Hero">
       {/* Ambient accent glow centered to preserve equal side margins */}
       <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 -z-10 h-[520px] w-[520px] rounded-full bg-accent/10 blur-3xl" aria-hidden="true" />
 
-      <Container className="h-full pt-6 pb-16 md:pt-8 md:pb-24">
-        <div className="grid h-full grid-cols-1 items-start content-start gap-8 md:gap-12 lg:grid-cols-2 max-w-6xl mx-auto">
+      <Container className="pt-6 pb-16 md:pt-8 md:pb-24">
+        <div className="grid grid-cols-1 items-center gap-8 md:gap-12 lg:grid-cols-2 max-w-6xl mx-auto">
           {/* Copy left */}
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-text">
@@ -41,7 +41,7 @@ export function Hero() {
             <p className="mt-6 text-base md:text-lg text-muted">
               Mediaverse is a full-scale creative and digital production company helping brands, creators, and businesses tell powerful stories through visuals, design, and technology.
             </p>
-            <div className="mt-10 flex items-center gap-4">
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
               <Button href="#works" variant="ghost" className="!bg-[#00F0FF] !text-black hover:brightness-110 focus-visible:ring-[#00F0FF] group gap-2">
                 <span>Explore Our Work</span>
                 <span aria-hidden="true" className="inline-flex items-center transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
@@ -87,10 +87,10 @@ export function Hero() {
             </div>
 
             {/* Services pager: exactly two fixed-width cards per page */}
-            <ul role="list" aria-label="Mediaverse services" className="mt-2 md:mt-3 flex w-full items-stretch justify-center gap-4 pb-8 md:pb-10">
+            <ul role="list" aria-label="Mediaverse services" className="mt-2 md:mt-3 grid grid-cols-1 sm:grid-cols-2 w-full gap-4 pb-8 md:pb-10">
               {visibleServices.map((s) => (
-                <li key={s.title} className="shrink-0">
-                  <Link href={s.href} className="group block h-[140px] w-[240px] sm:w-[260px] md:w-[280px] rounded-xl border border-white/10 bg-white/5 p-4 shadow-card backdrop-blur-md transition-all hover:border-white/20 ring-1 ring-[#00F0FF]/10 hover:ring-[#00F0FF]/30 shadow-[0_0_24px_rgba(0,240,255,0.10)] hover:shadow-[0_0_32px_rgba(0,240,255,0.18)]">
+                <li key={s.title}>
+                  <Link href={s.href} className="group block h-[140px] w-full rounded-xl border border-white/10 bg-white/5 p-4 shadow-card backdrop-blur-md transition-all hover:border-white/20 ring-1 ring-[#00F0FF]/10 hover:ring-[#00F0FF]/30 shadow-[0_0_24px_rgba(0,240,255,0.10)] hover:shadow-[0_0_32px_rgba(0,240,255,0.18)]">
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-semibold text-white/70">{/* number intentionally omitted on paged view */}</span>
                       <div className="flex items-center gap-1" aria-hidden="true">
@@ -107,7 +107,7 @@ export function Hero() {
           </div>
 
           {/* Media right: circular placeholder image until loop video is provided */}
-          <div className="relative mx-auto lg:mx-auto overflow-hidden">
+          <div className="relative mx-auto overflow-hidden hidden lg:block">
             {/* Decorative ring */}
             <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-tr from-accent/25 via-transparent to-transparent blur-2xl" aria-hidden="true" />
             <div className="relative h-[220px] w-[220px] md:h-[340px] md:w-[340px] lg:h-[420px] lg:w-[420px] overflow-hidden rounded-full ring-1 ring-border/60 shadow-elevated">
