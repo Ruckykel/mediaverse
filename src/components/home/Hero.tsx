@@ -2,6 +2,7 @@
 import React, { useCallback, useMemo, useState } from "react";
 import { Container } from "../../components/Container";
 import { Button } from "../../components/Button";
+import { ContactButton } from "../../components/ContactButton";
 import Image from "next/image";
 import Link from "next/link";
 import { services as servicesData } from "./Services";
@@ -27,21 +28,21 @@ export function Hero() {
   const visibleServices = pages[pageIndex] ?? servicesData.slice(0, 2);
 
   return (
-    <section className="relative isolate -mt-16 pt-24 md:pt-28 pb-12 md:pb-20 min-h-[100dvh] overflow-hidden" aria-label="Hero">
+    <section className="relative isolate -mt-16 pt-24 md:pt-28 pb-8 md:pb-12 min-h-[100dvh] overflow-hidden" aria-label="Hero">
       {/* Ambient accent glow centered to preserve equal side margins */}
       <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 -z-10 h-[520px] w-[520px] rounded-full bg-accent/10 blur-3xl" aria-hidden="true" />
 
-      <Container className="pt-6 pb-16 md:pt-8 md:pb-24">
+      <Container className="pt-6 pb-8 md:pt-8 md:pb-12">
         <div className="grid grid-cols-1 items-center gap-8 md:gap-12 lg:grid-cols-2 max-w-6xl mx-auto">
-          {/* Copy left */}
-          <div className="max-w-3xl">
+          {/* Copy left — centered on mobile */}
+          <div className="max-w-3xl text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-text">
               Where Vision Meets <span className="text-[#00F0FF]">Digital Reality</span>
             </h1>
-            <p className="mt-6 text-base md:text-lg text-muted">
-              Mediaverse is a full-scale creative and digital production company helping brands, creators, and businesses tell powerful stories through visuals, design, and technology.
+            <p className="mt-6 text-base md:text-lg text-muted mx-auto lg:mx-0 max-w-xl">
+              Fastmedia24 is a full-scale creative and digital production company helping brands, creators, and businesses tell powerful stories through visuals, design, and technology.
             </p>
-            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-3 sm:gap-4">
               <Button href="#works" variant="ghost" className="!bg-[#00F0FF] !text-black hover:brightness-110 focus-visible:ring-[#00F0FF] group gap-2">
                 <span>Explore Our Work</span>
                 <span aria-hidden="true" className="inline-flex items-center transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
@@ -51,13 +52,13 @@ export function Hero() {
                   </svg>
                 </span>
               </Button>
-              <Button href="/contact#contact-form" variant="secondary" className="hover:bg-elevated/60">
+              <ContactButton className="inline-flex items-center justify-center rounded-full font-semibold transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:translate-y-[1px] px-5 py-3 text-sm border border-border text-text hover:bg-elevated/60">
                 Book a Consultation
-              </Button>
+              </ContactButton>
             </div>
 
             {/* Carousel controls */}
-            <div className="mt-6 flex items-center justify-end gap-2">
+            <div className="mt-6 flex items-center justify-center lg:justify-end gap-2">
               <button
                 aria-label="Previous services"
                 disabled={!canPrev}
@@ -86,11 +87,11 @@ export function Hero() {
               </button>
             </div>
 
-            {/* Services pager: exactly two fixed-width cards per page */}
-            <ul role="list" aria-label="Mediaverse services" className="mt-2 md:mt-3 grid grid-cols-1 sm:grid-cols-2 w-full gap-4 pb-8 md:pb-10">
+            {/* Services pager: single row of two cards */}
+            <ul role="list" aria-label="Fastmedia24 services" className="mt-2 md:mt-3 grid grid-cols-2 w-full gap-3 pb-4 md:pb-6">
               {visibleServices.map((s) => (
                 <li key={s.title}>
-                  <Link href={s.href} className="group block h-[140px] w-full rounded-xl border border-white/10 bg-white/5 p-4 shadow-card backdrop-blur-md transition-all hover:border-white/20 ring-1 ring-[#00F0FF]/10 hover:ring-[#00F0FF]/30 shadow-[0_0_24px_rgba(0,240,255,0.10)] hover:shadow-[0_0_32px_rgba(0,240,255,0.18)]">
+                  <Link href={s.href} className="group block h-[130px] w-full rounded-xl border border-white/10 bg-white/5 p-4 shadow-card backdrop-blur-md transition-all hover:border-white/20 ring-1 ring-[#00F0FF]/10 hover:ring-[#00F0FF]/30 shadow-[0_0_24px_rgba(0,240,255,0.10)] hover:shadow-[0_0_32px_rgba(0,240,255,0.18)]">
                     <div className="flex items-center justify-between">
                       <span className="text-[11px] font-semibold text-white/70">{/* number intentionally omitted on paged view */}</span>
                       <div className="flex items-center gap-1" aria-hidden="true">
@@ -98,8 +99,8 @@ export function Hero() {
                         <span className="h-2 w-2 rounded-full bg-accent/40" />
                       </div>
                     </div>
-                    <h3 className="mt-3 text-sm font-semibold text-text">{s.title}</h3>
-                    <p className="mt-1 text-xs text-white/70">{getBriefText(s.desc, 88)}</p>
+                    <h3 className="mt-3 text-xs sm:text-sm font-semibold text-text leading-tight">{s.title}</h3>
+                    <p className="mt-1 text-[11px] sm:text-xs text-white/70 line-clamp-2">{getBriefText(s.desc, 80)}</p>
                   </Link>
                 </li>
               ))}
@@ -119,5 +120,3 @@ export function Hero() {
     </section>
   );
 }
-
-

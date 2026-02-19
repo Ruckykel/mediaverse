@@ -5,7 +5,7 @@ import { Container } from "../../../components/Container";
 import { FaPalette, FaPenRuler, FaMobileScreen, FaImage } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Graphic Design — Professional Design Services | Mediaverse",
+  title: "Graphic Design — Professional Design Services | Fastmedia24",
   description: "Professional graphic design services including branding, print, digital, and UI/UX design.",
 };
 

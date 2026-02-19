@@ -22,7 +22,7 @@ export function Partners({ logos = defaultLogos }: PartnersProps) {
   const loop = [...logos, ...logos];
 
   return (
-    <section aria-label="We work with the best partners" className="py-16">
+    <section aria-label="We work with the best partners" className="py-10">
       <Container>
         <div className="text-center max-w-6xl mx-auto">
           <p className="text-[11px] tracking-widest text-white/60">PARTNERS</p>

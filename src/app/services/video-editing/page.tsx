@@ -5,7 +5,7 @@ import { Container } from "../../../components/Container";
 import { FaFilm, FaWandMagicSparkles, FaPalette, FaScissors } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Video Editing — Professional Post-Production | Mediaverse",
+  title: "Video Editing — Professional Post-Production | Fastmedia24",
   description: "Professional video editing, color grading, motion graphics, and post-production services.",
 };
 

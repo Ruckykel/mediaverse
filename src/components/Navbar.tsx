@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
 import { Container } from "./Container";
-import { Button } from "./Button";
+import { ContactButton } from "./ContactButton";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -46,7 +46,7 @@ export function Navbar() {
           <div className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[#00F0FF]/6 blur-md" aria-hidden="true" />
           <div className="flex items-center justify-between rounded-full border border-white/10 bg-white/5 backdrop-blur supports-[backdrop-filter]:backdrop-blur px-3 py-2 ring-1 ring-[#00F0FF]/10 shadow-[0_0_10px_rgba(0,240,255,0.08)]">
             <Link href="/" className="flex items-center gap-2 pl-1">
-              <Image src="/mediaverse.png" alt="Mediaverse" width={140} height={28} priority />
+              <Image src="/mediaverse.png" alt="Fastmedia24" width={140} height={28} priority />
             </Link>
 
             {/* Desktop nav */}
@@ -86,13 +86,11 @@ export function Navbar() {
               )}
             </nav>
             <div className="hidden md:block pr-1">
-              <Button
-                href="/contact"
-                variant="primary"
-                className="px-6 py-2.5 text-sm !bg-[#00F0FF] !text-black hover:brightness-110 focus-visible:ring-[#00F0FF]"
+              <ContactButton
+                className="inline-flex items-center justify-center rounded-full font-semibold transition-transform focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:translate-y-[1px] px-6 py-2.5 text-sm bg-[#00F0FF] text-black hover:brightness-110 focus-visible:ring-[#00F0FF]"
               >
                 Get Started
-              </Button>
+              </ContactButton>
             </div>
 
             {/* Mobile hamburger button */}
@@ -139,13 +137,11 @@ export function Navbar() {
                 ))}
               </div>
               <div className="mt-4">
-                <Link
-                  href="/contact"
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center rounded-full bg-[#00F0FF] px-6 py-3 text-sm font-semibold text-black hover:brightness-110"
+                <ContactButton
+                  className="w-full flex items-center justify-center rounded-full bg-[#00F0FF] px-6 py-3 text-sm font-semibold text-black hover:brightness-110"
                 >
                   Get Started
-                </Link>
+                </ContactButton>
               </div>
             </div>
           )}

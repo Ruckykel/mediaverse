@@ -1,17 +1,18 @@
-import Link from "next/link";
+"use client";
 import React from "react";
 import { Container } from "../../components/Container";
+import { ContactButton } from "../../components/ContactButton";
 
 export function Why() {
   return (
-    <section aria-label="A Creative Partner That Thinks Beyond Pixels" className="relative isolate py-20 md:py-28">
+    <section aria-label="A Creative Partner That Thinks Beyond Pixels" className="relative isolate py-10 md:py-14">
       <Container>
         <div className="mx-auto max-w-6xl">
           <div>
             <div className="min-w-0">
-              <p className="text-[11px] tracking-widest text-white/60">WHY CHOOSE MEDIAVERSE</p>
+              <p className="text-[11px] tracking-widest text-white/60">WHY CHOOSE FASTMEDIA24</p>
               <h2 className="mt-2 text-2xl md:text-4xl font-extrabold">A Creative Partner That <span className="text-[#00F0FF]">Thinks</span> <span className="text-[#00F0FF]">Beyond Pixels</span></h2>
-              <p className="mt-3 max-w-2xl text-sm md:text-base text-muted">We don’t just deliver projects — we build long-term creative relationships. Our team blends artistry with strategy to create work that looks great and performs even better.</p>
+              <p className="mt-3 max-w-2xl text-sm md:text-base text-muted">We don&apos;t just deliver projects — we build long-term creative relationships. Our team blends artistry with strategy to create work that looks great and performs even better.</p>
             </div>
           </div>
 
@@ -35,12 +36,10 @@ export function Why() {
             </div>
           </div>
           <div className="mt-8">
-            <Link href="/contact#contact-form" className="inline-flex items-center rounded-full bg-[#00F0FF] px-4 py-2 text-sm font-semibold text-black hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F0FF]">Get Started</Link>
+            <ContactButton className="inline-flex items-center rounded-full bg-[#00F0FF] px-4 py-2 text-sm font-semibold text-black hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F0FF]">Get Started</ContactButton>
           </div>
         </div>
       </Container>
     </section>
   );
 }
-
-

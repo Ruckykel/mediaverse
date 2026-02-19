@@ -5,7 +5,7 @@ import { Container } from "../../../components/Container";
 import { FaCode, FaCubes, FaGear, FaServer } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Web & Interactive Experiences — Mediaverse",
+  title: "Web & Interactive Experiences — Fastmedia24",
   description: "Custom website design, development, and immersive digital experiences.",
 };
 

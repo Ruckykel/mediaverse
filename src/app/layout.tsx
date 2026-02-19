@@ -3,6 +3,8 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { ContactModalProvider } from "../components/ContactModalContext";
+import { NavigationProgress } from "../components/NavigationProgress";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,9 +13,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Mediaverse — Where Vision Meets Digital Reality",
+  title: "Fastmedia24 — Where Vision Meets Digital Reality",
   description:
-    "Mediaverse is a full-scale creative and digital production company helping brands, creators, and businesses tell powerful stories through visuals, design, and technology.",
+    "Fastmedia24 is a full-scale creative and digital production company helping brands, creators, and businesses tell powerful stories through visuals, design, and technology.",
 };
 
 export default function RootLayout({
@@ -26,10 +28,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} antialiased`}
       >
-        <div className="app-gradient" />
-        <Navbar />
-        {children}
-        <Footer />
+        <ContactModalProvider>
+          <NavigationProgress />
+          <div className="app-gradient" />
+          <Navbar />
+          {children}
+          <Footer />
+        </ContactModalProvider>
       </body>
     </html>
   );

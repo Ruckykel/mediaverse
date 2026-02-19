@@ -67,30 +67,29 @@ export function Services() {
   }, [current.title]);
 
   return (
-    <section id="services" className="py-20">
+    <section id="services" className="py-10 md:py-14">
       <Container>
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-end justify-between gap-6">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold">Crafting Experiences That Captivate and Convert</h2>
-              <p className="mt-2 text-muted text-base">We’re not just storytellers — we’re builders of digital experiences. From powerful media productions to full-scale brand development, we merge creativity, strategy, and technology to help your brand stand out across every screen and platform.</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <button aria-label="Previous service" onClick={goPrev} className="h-9 w-9 rounded-full border border-[#00F0FF]/50 bg-[#00F0FF]/10 text-[#00F0FF] hover:bg-[#00F0FF]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F0FF] transition-colors">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto">
-                  <path d="M15 6L9 12L15 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-              <button aria-label="Next service" onClick={goNext} className="h-9 w-9 rounded-full border border-[#00F0FF]/50 bg-[#00F0FF]/10 text-[#00F0FF] hover:bg-[#00F0FF]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F0FF] transition-colors">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto">
-                  <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </div>
+          {/* Header row — text takes full width, arrows below on mobile */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold">Crafting Experiences That Captivate and Convert</h2>
+            <p className="mt-2 text-muted text-base">We&apos;re not just storytellers — we&apos;re builders of digital experiences. From powerful media productions to full-scale brand development, we merge creativity, strategy, and technology to help your brand stand out across every screen and platform.</p>
+          </div>
+          <div className="mt-4 flex items-center gap-2">
+            <button aria-label="Previous service" onClick={goPrev} className="h-9 w-9 rounded-full border border-[#00F0FF]/50 bg-[#00F0FF]/10 text-[#00F0FF] hover:bg-[#00F0FF]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F0FF] transition-colors">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto">
+                <path d="M15 6L9 12L15 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            <button aria-label="Next service" onClick={goNext} className="h-9 w-9 rounded-full border border-[#00F0FF]/50 bg-[#00F0FF]/10 text-[#00F0FF] hover:bg-[#00F0FF]/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00F0FF] transition-colors">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="mx-auto">
+                <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
           </div>
 
           {/* Carousel item */}
-          <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {/* Left: media */}
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-white/10 bg-white/5 ring-1 ring-[#00F0FF]/10 shadow-[0_0_24px_rgba(0,240,255,0.08)]">
               <Image src={index % 2 === 0 ? "/sample1.webp" : "/sample2.webp"} alt={current.title} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
@@ -141,5 +140,3 @@ export function Services() {
     </section>
   );
 }
-
-

@@ -61,7 +61,7 @@ export function AboutSkills() {
   };
 
   return (
-    <section aria-label="Our Skills and Impact" className="py-16">
+    <section aria-label="Our Skills and Impact" className="py-8">
       <Container>
         <div ref={ref} className="max-w-6xl mx-auto grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
           {/* Left: Skills with progress */}
@@ -89,22 +89,22 @@ export function AboutSkills() {
           {/* Right: Stats */}
           <div className="flex h-full w-full items-center justify-end justify-self-end">
             <div className="grid grid-cols-2 gap-10 lg:gap-12 justify-items-center text-center">
-            <div>
+              <div>
                 <div className="text-4xl md:text-5xl font-extrabold">{counts.years}+</div>
-              <p className="mt-2 text-white/70">Years of Experience</p>
-            </div>
-            <div>
+                <p className="mt-2 text-white/70">Years of Experience</p>
+              </div>
+              <div>
                 <div className="text-4xl md:text-5xl font-extrabold">{counts.projects}+</div>
-              <p className="mt-2 text-white/70">Projects Done</p>
-            </div>
-            <div>
+                <p className="mt-2 text-white/70">Projects Done</p>
+              </div>
+              <div>
                 <div className="text-4xl md:text-5xl font-extrabold">{counts.clients}+</div>
-              <p className="mt-2 text-white/70">Satisfied Clients</p>
-            </div>
-            <div>
+                <p className="mt-2 text-white/70">Satisfied Clients</p>
+              </div>
+              <div>
                 <div className="text-4xl md:text-5xl font-extrabold">{counts.awards}</div>
-              <p className="mt-2 text-white/70">Certified Awards</p>
-            </div>
+                <p className="mt-2 text-white/70">Certified Awards</p>
+              </div>
             </div>
           </div>
         </div>

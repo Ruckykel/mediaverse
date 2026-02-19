@@ -8,7 +8,7 @@ import { Why } from "../../components/home/Why";
 import { Featured } from "../../components/home/Featured";
 
 export const metadata: Metadata = {
-  title: "Services — Mediaverse",
+  title: "Services — Fastmedia24",
   description: "Explore all creative services: event coverage, rentals, design, editing, and web.",
 };
 

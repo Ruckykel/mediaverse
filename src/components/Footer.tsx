@@ -68,9 +68,9 @@ export function Footer() {
           {/* Column 1 — Brand + Socials */}
           <div className="space-y-4 w-fit">
             <Link href="/" className="inline-flex">
-              <Image src="/mediaverse.png" alt="Mediaverse" width={160} height={32} />
+              <Image src="/mediaverse.png" alt="Fastmedia24" width={160} height={32} />
             </Link>
-            <p className="text-sm text-muted max-w-[40ch]">Mediaverse is a full-scale creative and digital agency merging storytelling, strategy, and technology to help brands stand out, connect, and grow.</p>
+            <p className="text-sm text-muted max-w-[40ch]">Fastmedia24 is a full-scale creative and digital agency merging storytelling, strategy, and technology to help brands stand out, connect, and grow.</p>
             <div className="flex items-center gap-4 text-muted">
               <Link href="#" aria-label="Instagram" className="hover:text-text" title="Instagram"><IconInstagram className="h-5 w-5" /></Link>
               <Link href="#" aria-label="YouTube" className="hover:text-text" title="YouTube"><IconYoutube className="h-5 w-5" /></Link>
@@ -107,7 +107,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold">Contact Us</h4>
             <ul className="mt-4 space-y-2">
               <li className="text-sm text-muted">Lagos, Nigeria</li>
-              <li className="text-sm text-muted flex items-center gap-2"><IconEmail className="h-4 w-4" /><a href="mailto:hello@mediaverse.com" className="hover:text-[#00F0FF] transition-colors">hello@mediaverse.com</a></li>
+              <li className="text-sm text-muted flex items-center gap-2"><IconEmail className="h-4 w-4" /><a href="mailto:hello@fastmedia24.com" className="hover:text-[#00F0FF] transition-colors">hello@fastmedia24.com</a></li>
               <li className="text-sm text-muted flex items-center gap-2"><IconPhone className="h-4 w-4" /><a href="tel:+2348000000000" className="hover:text-[#00F0FF] transition-colors">+234 (0) 800 000 0000</a></li>
             </ul>
             <form className="mt-6 flex items-center gap-2">
@@ -118,7 +118,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 border-t border-white/10 pt-6">
-          <p className="text-center text-sm text-muted">© {new Date().getFullYear()} Mediaverse. All Rights Reserved.</p>
+          <p className="text-center text-sm text-muted">© {new Date().getFullYear()} Fastmedia24. All Rights Reserved.</p>
         </div>
       </Container>
     </footer>

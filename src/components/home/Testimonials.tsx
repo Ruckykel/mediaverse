@@ -4,7 +4,7 @@ import { Container } from "../../components/Container";
 
 const testimonials = [
   {
-    quote: "Mediaverse captured our wedding perfectly — the video still makes me tear up!",
+    quote: "Fastmedia24 captured our wedding perfectly — the video still makes me tear up!",
     author: "Anita & Chuka",
     role: "Wedding Clients",
   },
@@ -22,7 +22,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-20">
+    <section className="py-10">
       <Container>
         <h2 className="text-2xl md:text-3xl font-bold">What clients say</h2>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">

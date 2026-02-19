@@ -81,11 +81,12 @@ export function Featured() {
   };
 
   return (
-    <section className="py-20" id="works">
+    <section className="py-10 md:py-14" id="works">
       <Container>
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold">See what we’ve created.</h2>
-          <p className="mt-2 text-muted">Browse by category to explore work we’ve delivered.</p>
+        {/* Center the header & subtext */}
+        <div className="text-center">
+          <h2 className="text-2xl md:text-3xl font-bold">See what we&apos;ve created.</h2>
+          <p className="mt-2 text-muted">Browse by category to explore work we&apos;ve delivered.</p>
         </div>
 
         {/* Sliding segmented control */}
@@ -170,12 +171,17 @@ export function Featured() {
           })}
         </div>
 
-        <div className="mt-8 md:hidden">
-          <Link href="/portfolio" className="text-accent font-semibold">View Full Portfolio</Link>
+        {/* View Portfolio button — always visible, styled as a proper button */}
+        <div className="mt-8 text-center">
+          <Link href="/portfolio" className="inline-flex items-center justify-center rounded-full border border-[#00F0FF]/50 bg-[#00F0FF]/10 px-6 py-3 text-sm font-semibold text-[#00F0FF] hover:bg-[#00F0FF]/20 transition-colors">
+            View Full Portfolio
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="ml-2">
+              <path d="M7 17L17 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M9 7H17V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
         </div>
       </Container>
     </section>
   );
 }
-
-

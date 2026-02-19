@@ -5,7 +5,7 @@ import { Container } from "../../../components/Container";
 import { FaHashtag, FaChartLine, FaUsers, FaBullseye } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing & Social Strategy — Mediaverse",
+  title: "Digital Marketing & Social Strategy — Fastmedia24",
   description: "Strategic digital marketing, social media management, and growth-focused campaigns.",
 };
 
@@ -167,7 +167,7 @@ export default function MarketingPage() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-500">That Performs</span>
               </h2>
               <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-                Partner with Mediaverse to transform engagement into growth and strategy into success.
+                Partner with Fastmedia24 to transform engagement into growth and strategy into success.
               </p>
               <Link
                 href="/contact#contact-form"

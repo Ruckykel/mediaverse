@@ -5,7 +5,7 @@ import { Container } from "../../../components/Container";
 import { FaCamera, FaVideo, FaLightbulb, FaHeadphones } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Camera & Equipment Rentals — Mediaverse",
+  title: "Camera & Equipment Rentals — Fastmedia24",
   description: "Professional camera, lighting, and audio equipment rentals for your production needs.",
 };
 

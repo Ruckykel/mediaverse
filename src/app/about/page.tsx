@@ -7,8 +7,8 @@ import { Team } from "../../components/about/Team";
 import { AboutCTA } from "../../components/about/AboutCTA";
 
 export const metadata: Metadata = {
-  title: "About — Mediaverse",
-  description: "About Mediaverse — creative studio for photo, video, design, and web.",
+  title: "About — Fastmedia24",
+  description: "About Fastmedia24 — creative studio for photo, video, design, and web.",
 };
 
 export default function AboutPage() {

@@ -5,7 +5,7 @@ import { Container } from "../../../components/Container";
 import { FaPalette, FaPenNib, FaMobileScreen, FaArrowsRotate } from "react-icons/fa6";
 
 export const metadata: Metadata = {
-  title: "Branding & Creative Design — Mediaverse",
+  title: "Branding & Creative Design — Fastmedia24",
   description: "Strategic brand identity, visual design, and creative solutions that make your brand unforgettable.",
 };
 
